@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function Gallery() {
   const images = [
     {
-      image: "/src/assets/Images/Image01.webp",
+      image: "/src/assets/Images/About us.webp",
       transDuration: 1,
     },
     {
