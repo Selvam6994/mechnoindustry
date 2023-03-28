@@ -3,78 +3,88 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { motion } from "framer-motion";
-import image1 from "../src/assets/Images/Image01.webp"
-import image2 from "../src/assets/Images/Image02.webp"
-import image3 from "../src/assets/Images/Image03.webp"
-import image4 from "../src/assets/Images/Image04.webp"
-import image5 from "../src/assets/Images/Image05.webp"
-import image6 from "../src/assets/Images/Image06.webp"
-import image7 from "../src/assets/Images/Image07.webp"
-import image8 from "../src/assets/Images/Image08.webp"
-import image9 from "../src/assets/Images/Image09.webp"
-import image10 from "../src/assets/Images/Image10.webp"
-import image11 from "../src/assets/Images/Image11.webp"
-import image12 from "../src/assets/Images/Image12.webp"
-import image13 from "../src/assets/Images/Image13.webp"
-import image14 from "../src/assets/Images/Image14.webp"
+import image1 from "../src/assets/Images/Image01.webp";
+import image2 from "../src/assets/Images/Image02.webp";
+import image3 from "../src/assets/Images/Image03.webp";
+import image4 from "../src/assets/Images/Image04.webp";
+import image5 from "../src/assets/Images/Image05.webp";
+import image6 from "../src/assets/Images/Image06.webp";
+import image7 from "../src/assets/Images/Image07.webp";
+import image8 from "../src/assets/Images/Image08.webp";
+import image9 from "../src/assets/Images/Image09.webp";
+import image10 from "../src/assets/Images/Image10.webp";
+import image11 from "../src/assets/Images/Image11.webp";
+import image12 from "../src/assets/Images/Image12.webp";
+import image13 from "../src/assets/Images/Image13.webp";
+import image14 from "../src/assets/Images/Image14.webp";
 
 function Gallery() {
   const images = [
     {
+      name: "Safety Fencing in KIA",
       image: image1,
       transDuration: 1,
     },
     {
+      name: "Nachi Robot Arm",
       image: image2,
       transDuration: 2,
     },
     {
-        image: image3,
-        transDuration: 3,
+      name: "Pneumatic Gripper",
+      image: image3,
+      transDuration: 3,
     },
     {
-        image: image4,
-        transDuration: 4,
+      name: "Jig",
+      image: image4,
+      transDuration: 4,
     },
     {
-        image: image5,
-        transDuration: 5,
+      name: "Safety Fencing in KIA and Hyundai Transys",
+      image: image5,
+      transDuration: 5,
     },
     {
-        image: image6,
-        transDuration: 6,
+      name: "Safety Fencing",
+      image: image6,
+      transDuration: 6,
     },
     {
-        image: image7,
-        transDuration: 7,
+      name: "Robot Safety Fencing",
+      image: image7,
+      transDuration: 7,
+    },
+    { name: "Chute Trolly", image: image8, transDuration: 8 },
+    {
+      name: "Tilting machine",
+      image: image9,
+      transDuration: 9,
     },
     {
-        image: image8,
-        transDuration: 8,
+      name: "Trolly",
+      image: image10,
+      transDuration: 10,
     },
     {
-        image: image9,
-        transDuration: 9,
+      name: "Robot",
+      image: image11,
+      transDuration: 11,
     },
     {
-        image: image10,
-        transDuration: 10,
+      name: "S S Table",
+      image: image12,
+      transDuration: 12,
     },
     {
-        image: image11,
-        transDuration: 11,
+      name: "Inspection table for leading MNC company",
+      image: image13,
+      transDuration: 13,
     },
     {
-        image: image12,
-        transDuration: 12,
-    },
-    {
-        image: image13,
-        transDuration: 13,
-    },
-    {
-        image: image14,
-        transDuration: 14,
+      name: "Aluminium Pallet",
+      image: image14,
+      transDuration: 14,
     },
   ];
 
@@ -103,7 +113,7 @@ function Gallery() {
                         : { width: "150px", height: "200px" }
                     }
                     image={img.image}
-                    title="green iguana"
+                    title={img.name}
                   />
                 </Card>
               ) : (
@@ -111,7 +121,7 @@ function Gallery() {
                   <CardMedia
                     style={{ width: "100px", height: "200px" }}
                     image={img.image}
-                    title="green iguana"
+                    title={img.name}
                   />
                 </Card>
               )}
