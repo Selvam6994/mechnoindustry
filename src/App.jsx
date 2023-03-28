@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import bgImage from "../src/assets/Images/bgimage1.jpg";
 import About from "./About";
 import { Route, Routes,Link } from "react-router-dom";
+import logo from "../src/assets/Images/Logo.webp";
 // import ListItemAvatar from "@mui/material/ListItemAvatar";
 // import Avatar from "@mui/material/Avatar";
 // import ImageIcon from "@mui/icons-material/Image";
@@ -25,7 +26,7 @@ function App() {
       linkTo:"/"
     },
     {
-      optionName:"About Us",
+      optionName:"About",
       linkTo:"/about"
     },
     {
@@ -41,16 +42,11 @@ function App() {
       linkTo:"/gallery"
     },
     {
-      optionName:"Contact Us",
+      optionName:"Contact",
       linkTo:"/contact"
     },
   ];
-  // "Home",
-  // "Automation",
-  // "Industrial Services",
-  // "Gallery",
-  // "About Us",
-  // "Contact Us",
+
   const scrollDown = () => {
     if (window.scrollY >= 50) {
       setNavbar(true);
@@ -71,6 +67,7 @@ function App() {
       {appWidth == true ? (
         <div className={navbar == false ? "navBar" : "navBarActive"}>
           <div className="titleSection">
+            <img style={{width:"100px"}} src={logo}></img>
             <div>Mechno Dream Industry</div>
           </div>
           <div className="navOptions">
@@ -113,6 +110,7 @@ function App() {
             </Dropdown>
           </div>
           <div className="titleSection">
+          <img style={{width:"100px"}} src={logo}></img>
             <span>Mechno Dream Industry</span>
             
           </div>

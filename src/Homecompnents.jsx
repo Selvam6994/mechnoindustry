@@ -10,7 +10,6 @@ import automation from "../src/assets/Images/Automation.webp";
 import industrialService from "../src/assets/Images/Industrial Services.webp";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-
 function Homecompnents() {
   const matches = useMediaQuery("(min-width:870px)");
   const cardContent = [
@@ -78,7 +77,7 @@ function Homecompnents() {
                           color: "black",
                         }}
                       >
-                       Know More
+                        Know More
                       </Button>
                     </CardActions>
                   </div>
@@ -97,7 +96,7 @@ function Homecompnents() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   duration: 1,
-                  delay:1,
+                  delay: 1,
                   ease: [0, 0.71, 0.2, 1.01],
                 }}
               >
@@ -115,12 +114,16 @@ function Homecompnents() {
                     height="140"
                     image={data.image}
                   />
-                  <div key={cardContent.title} className="cardContentSection">
-                    <CardContent>
+                  <div
+                    key={cardContent.title}
+                    className="cardContentSection"
+                   
+                  >
+                    <CardContent  style={{ color: "white" }}>
                       <Typography gutterBottom variant="h5" component="div">
                         {data.title}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" >
                         {data.content}
                       </Typography>
                     </CardContent>
