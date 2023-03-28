@@ -41,7 +41,6 @@ ul {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 li {
   gap: 1rem;
@@ -326,8 +325,7 @@ li {
   align-items: center;
 }
 
-.gallerySection{
-
+.gallerySection {
   position: absolute;
   margin: 100px 0px 0 0px;
   width: 100%;
@@ -338,15 +336,15 @@ li {
   align-items: center;
   justify-content: center;
 }
-.galleryImageSection{
+.galleryImageSection {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
- 
-width: 100%;
-margin: 100px 0 0 0;
+
+  width: 100%;
+  margin: 100px 0 0 0;
 }
 
 .footerSectionBefore {

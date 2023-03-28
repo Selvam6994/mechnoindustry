@@ -81,7 +81,7 @@ function Gallery() {
           >
             <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
               {minGalleryWidth == true ? (
-                <Card className="imageCard"  style={{ margin: "20px" }}>
+                <Card className="imageCard" style={{ margin: "20px" }}>
                   <CardMedia
                     style={
                       galleryWidth == true
