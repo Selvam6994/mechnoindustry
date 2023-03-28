@@ -7,59 +7,59 @@ import { motion } from "framer-motion";
 function Gallery() {
   const images = [
     {
-      image: "/src/assets/Images/Gallery/Image01.webp",
+      image: "/src/assets/Images/Image01.webp",
       transDuration: 1,
     },
     {
-      image: "/src/assets/Images/Gallery/Image02.webp",
+      image: "/src/assets/Images/Image02.webp",
       transDuration: 2,
     },
     {
-      image: "/src/assets/Images/Gallery/Image03.webp",
+      image: "/src/assets/Images/Image03.webp",
       transDuration: 3,
     },
     {
-      image: "/src/assets/Images/Gallery/Image04.webp",
+      image: "/src/assets/Images/Image04.webp",
       transDuration: 4,
     },
     {
-      image: "/src/assets/Images/Gallery/Image05.webp",
+      image: "/src/assets/Images/Image05.webp",
       transDuration: 5,
     },
     {
-      image: "/src/assets/Images/Gallery/Image06.webp",
+      image: "/src/assets/Images/Image06.webp",
       transDuration: 6,
     },
     {
-      image: "/src/assets/Images/Gallery/Image07.webp",
+      image: "/src/assets/Images/Image07.webp",
       transDuration: 7,
     },
     {
-      image: "/src/assets/Images/Gallery/Image08.webp",
+      image: "/src/assets/Images/Image08.webp",
       transDuration: 8,
     },
     {
-      image: "/src/assets/Images/Gallery/Image09.webp",
+      image: "/src/assets/Images/Image09.webp",
       transDuration: 9,
     },
     {
-      image: "/src/assets/Images/Gallery/Image10.webp",
+      image: "/src/assets/Images/Image10.webp",
       transDuration: 10,
     },
     {
-      image: "/src/assets/Images/Gallery/Image11.webp",
+      image: "/src/assets/Images/Image11.webp",
       transDuration: 11,
     },
     {
-      image: "/src/assets/Images/Gallery/Image12.webp",
+      image: "/src/assets/Images/Image12.webp",
       transDuration: 12,
     },
     {
-      image: "/src/assets/Images/Gallery/Image13.webp",
+      image: "/src/assets/Images/Image13.webp",
       transDuration: 13,
     },
     {
-      image: "/src/assets/Images/Gallery/Image14.webp",
+      image: "/src/assets/Images/Image14.webp",
       transDuration: 14,
     },
   ];
