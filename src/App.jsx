@@ -66,7 +66,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       {appWidth == true ? (
         <div className={navbar == false ? "navBar" : "navBarActive"}>
@@ -78,7 +78,7 @@ function App() {
               {options.map((options) => (
                 <Link to={options.linkTo}>
                   
-                  <li className="options" key={options}>
+                  <li className="options" >
                     {options.optionName}
                   </li>
                 </Link>
@@ -104,8 +104,8 @@ function App() {
               <Dropdown.Menu>
                 {options.map((options) => (
                   <div className="dropDownOptions">
-                    <Dropdown.Item href="#/action-1" key={options}>
-                      {options}
+                    <Dropdown.Item  key={options.optionName}>
+                     <Link to={options.linkTo}> {options.optionName}</Link>
                     </Dropdown.Item>
                   </div>
                 ))}
@@ -114,6 +114,7 @@ function App() {
           </div>
           <div className="titleSection">
             <span>Mechno Dream Industry</span>
+            
           </div>
         </div>
       )}

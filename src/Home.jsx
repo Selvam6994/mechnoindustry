@@ -13,6 +13,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import aboutUsImage from "../src/assets/Images/About us.webp";
+import { Link } from "react-router-dom";
 
 function Home() {
   const imageAndCaption = [
@@ -95,7 +96,7 @@ function Home() {
                     color: "black",
                   }}
                 >
-                  Know More
+                 <Link to="/about">Know More</Link> 
                 </Button>
               </CardActions>
               </div>

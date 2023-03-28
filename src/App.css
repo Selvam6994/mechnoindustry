@@ -129,7 +129,7 @@ li {
 }
 .options:hover {
   background-color: rgba(1, 114, 249, 0.75);
-  color:rgb(61, 61, 61) ;
+  color: rgb(61, 61, 61);
 }
 
 .dropDownOptions:hover {
@@ -225,7 +225,7 @@ li {
   min-width: 280px;
 }
 .aboutPage {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   margin: 150px 0 0 0;
   width: 100%;
   min-width: 280px;
@@ -238,7 +238,6 @@ li {
   align-items: center;
 }
 .aboutUsCard {
-
   width: 80%;
   min-width: 280px;
   height: 350px;
@@ -250,46 +249,76 @@ li {
   background-color: rgba(61, 61, 61, 0.95);
   border-radius: 10px;
 }
-.aboutUs{
-  color:rgb(1, 113, 249) ;
+.aboutUs {
+  color: rgb(1, 113, 249);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.clientSection{
-  border: 2px solid green;
-  margin: 600px 0 0 0;
+.IconCard {
+
+
   width: 100%;
   min-width: 280px;
-  height: 300px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.clientIcons{
-  
-}
-.visionPage{
-  border: 2px solid green;
-  margin: 950px 0 0 0;
-  width: 100%;
-  min-width: 280px;
-  height: 300px;
+  margin: 800px 0 0 0;
   position: absolute;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
- 
+  height: fit-content;
 }
-.visionCard{
+.clientSection {
+  /* border: 2px solid green; */
+ 
+  width: 80%;
 
+  min-width: 280px;
+ border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-color: rgba(1, 114, 249, 0.75);
+  color: rgb(61, 61, 61);
+}
+.clientIconsSection {
+  /* border: 2px solid rgb(0, 11, 128); */
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+/* .clientIcons{
+  border: 2px solid rgb(128, 0, 0);
+ 
+ 
+} */
+.visionPage {
+  /* border: 2px solid green; */
+
+  width: 100%;
+  min-width: 280px;
+
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.visionCard {
   width: 80%;
   min-width: 280px;
   height: 300px;
@@ -300,10 +329,9 @@ li {
   align-items: center;
   background-color: rgba(61, 61, 61, 0.95);
   border-radius: 10px;
-
 }
-.vision{
-  color:rgb(1, 113, 249) ;
+.vision {
+  color: rgb(1, 113, 249);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -329,7 +357,11 @@ li {
   height: 400px;
   margin: 1800px 0 0 0;
 }
-
+.socialMediaSection{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 .contactDetails {
   display: flex;
   flex-direction: column;
