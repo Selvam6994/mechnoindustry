@@ -5,8 +5,6 @@
 
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  
- 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,4 +29,3 @@ a:hover {
   min-width: 320px;
   min-height: 100vh;
 } */
-

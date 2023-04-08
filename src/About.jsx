@@ -5,6 +5,17 @@ import Card from "@mui/material/Card";
 import client1 from "../src/assets/Images/company icons/BONFIGLIOLI.jpg";
 import client2 from "../src/assets/Images/company icons/ELFORGE.jpg";
 import client3 from "../src/assets/Images/company icons/hyundai transys.png";
+import client4 from "../src/assets/Images/company icons/Essae.jpg";
+import client5 from "../src/assets/Images/company icons/Fives.jpg";
+import client6 from "../src/assets/Images/company icons/Kia.jpg";
+import client7 from "../src/assets/Images/company icons/Malles.jpg";
+import client8 from "../src/assets/Images/company icons/Neel Metal.jpg";
+import client9 from "../src/assets/Images/company icons/Novares.jpg";
+import client10 from "../src/assets/Images/company icons/Tafe.jpg";
+import client11 from "../src/assets/Images/company icons/TBI.jpg";
+import client12 from "../src/assets/Images/company icons/JBM.jpg";
+import client13 from "../src/assets/Images/company icons/Wia.jpg";
+import client14 from "../src/assets/Images/company icons/NewTech.jpg";
 
 function About() {
   const clientImages = [
@@ -20,12 +31,57 @@ function About() {
       clientImage: client3,
       tansitionDuration: 2.5,
     },
+    {
+      clientImage: client4,
+      tansitionDuration: 3,
+    },
+    {
+      clientImage: client5,
+      tansitionDuration: 3.5,
+    },
+    {
+      clientImage: client6,
+      tansitionDuration: 4,
+    },
+    {
+      clientImage: client7,
+      tansitionDuration: 4.5,
+    },
+    {
+      clientImage: client8,
+      tansitionDuration: 5,
+    },
+    {
+      clientImage: client9,
+      tansitionDuration: 5.5,
+    },
+    {
+      clientImage: client10,
+      tansitionDuration: 6,
+    },
+    {
+      clientImage: client11,
+      tansitionDuration: 6.5,
+    },
+    {
+      clientImage: client12,
+      tansitionDuration: 7,
+    },
+    {
+      clientImage: client13,
+      tansitionDuration: 7.5,
+    },
+    {
+      clientImage: client14,
+      tansitionDuration: 8,
+    },
   ];
-  const aboutPageWidth = useMediaQuery("(min-width:595px)");
+  const pageWidth1 = useMediaQuery("(min-width:980px)");
+   const pageWidth2 = useMediaQuery("(min-width:500px)");
   const [springAction, setSpringAction] = useState(false);
   const [iconsSpringAction, setIconSpringAction] = useState(false);
   const scrollForIcons = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 200) {
       setIconSpringAction(true);
     } else if (window.scrollY >= 500) {
       setIconSpringAction(true);
@@ -45,9 +101,9 @@ function About() {
   window.addEventListener("scroll", scrollForIcons);
   return (
     <div className="aboutUsMain">
-      <div className="aboutPage">
+      <div className={pageWidth1==false?"aboutSectionAfter":"aboutSectionBefore"}>
         <motion.div
-          className="aboutUsCard"
+          className="aboutUsCardBefore"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -82,12 +138,12 @@ function About() {
       </div>
       {iconsSpringAction == true ? (
         <motion.div
-          className="IconCard"
-          initial={{ y: 100 }}
-          animate={{ y: 0 }}
+          className={pageWidth1==false? "IconCardat980px":"IconCardBefore"}
+          initial={pageWidth1==false?{ y: 200 }:{ y: 100 }}
+          animate={pageWidth1==false?{ y: 200 }:{ y: 0 }}
           transition={{
             type: "spring",
-            duration: 1,
+            duration: 2,
           }}
         >
           <div className="clientSection">
@@ -95,7 +151,7 @@ function About() {
             <div className="clientIconsSection">
               {clientImages.map((images) => (
                 <motion.div
-                  // className="visionCard"
+                  className="visionCard"
                   initial={{ y: 100 }}
                   animate={{ y: 0 }}
                   transition={{
@@ -104,19 +160,11 @@ function About() {
                   }}
                 >
                   <Card
-                    sx={
-                      aboutPageWidth == true
-                        ? { width: "150px", height: "150px",margin:"20px 0" }
-                        : { width: "100px", height: "100px",margin:"20px 0" }
-                    }
+                    sx={pageWidth1==true?{ width: "150px", height: "150px", margin: "20px 0" }:{ width: "80px", height: "80px", margin: "5px 0" }}
                     className="clientIcons"
                   >
                     <img
-                      style={
-                        aboutPageWidth == true
-                          ? { width: "150px", height: "150px" }
-                          : { width: "100px", height: "100px" }
-                      }
+                      style={pageWidth1==true?{ width: "150px", height: "150px" }:{ width: "80px", height: "80px", margin: "5px 0" }}
                       src={images.clientImage}
                       alt="Client Images"
                     />
@@ -129,82 +177,40 @@ function About() {
       ) : (
         ""
       )}
-      {aboutPageWidth == true ? (
-        <div
-          style={{ margin: "1000px 0 0 0", height: "300px" }}
-          className="visionPage"
-        >
-          {springAction == true ? (
-            <motion.div
-              className="visionCard"
-              initial={{ y: 100 }}
-              animate={{ y: 0 }}
-              transition={{ type: "spring", duration: 1.5 }}
-            >
-              <div className="vision">
-                <h1>Vision & Mission</h1>
-                <h3>Vision</h3>
-                <span>
-                  To transform our customer organizations by offering the
-                  best-in-class services
-                </span>
-                <span>
-                  thereby to lead as the best innovative player of Industrial
-                  Automation Services Provider.
-                </span>
-                <h3>Mission</h3>
-                <span>To remain a socially responsible entity,</span>
 
-                <span>which would constantly deliver premium quality,</span>
-                <span>
-                  innovative industrial solutions and a gratified customer
-                  experience.
-                </span>
-              </div>
-            </motion.div>
-          ) : (
-            ""
-          )}
-        </div>
-      ) : (
-        <div
-          style={{ margin: "1050px 0 0 0", height: "400px" }}
-          className="visionPage"
-        >
-          {springAction == true ? (
-            <motion.div
-              style={{ height: "400px" }}
-              className="visionCard"
-              initial={{ y: 100 }}
-              animate={{ y: 0 }}
-              transition={{ type: "spring" }}
-            >
-              <div className="vision">
-                <h1>Vision & Mission</h1>
-                <h3>Vision</h3>
-                <span>
-                  To transform our customer organizations by offering the
-                  best-in-class services
-                </span>
-                <span>
-                  thereby to lead as the best innovative player of Industrial
-                  Automation Services Provider.
-                </span>
-                <h3>Mission</h3>
-                <span>To remain a socially responsible entity,</span>
+      <div className="visionPageBefore">
+        {springAction == true ? (
+          <motion.div
+            className="visionCardBefore"
+            initial={{ y: 100 }}
+            animate={{ y: 0 }}
+            transition={{ type: "spring", duration: 1.5 }}
+          >
+            <div className="vision">
+              <h1>Vision & Mission</h1>
+              <h3>Vision</h3>
+              <span>
+                To transform our customer organizations by offering the
+                best-in-class services
+              </span>
+              <span>
+                thereby to lead as the best innovative player of Industrial
+                Automation Services Provider.
+              </span>
+              <h3>Mission</h3>
+              <span>To remain a socially responsible entity,</span>
 
-                <span>which would constantly deliver premium quality,</span>
-                <span>
-                  innovative industrial solutions and a gratified customer
-                  experience.
-                </span>
-              </div>
-            </motion.div>
-          ) : (
-            ""
-          )}
-        </div>
-      )}
+              <span>which would constantly deliver premium quality,</span>
+              <span>
+                innovative industrial solutions and a gratified customer
+                experience.
+              </span>
+            </div>
+          </motion.div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 }

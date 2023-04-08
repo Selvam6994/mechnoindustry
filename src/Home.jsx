@@ -32,7 +32,7 @@ function Home() {
   ];
   const [cards, setCards] = useState(false);
   const scrollDown = () => {
-    if (window.scrollY >= 210) {
+    if (window.scrollY >= 150) {
       setCards(true);
     } else {
       setCards(false);
@@ -68,37 +68,50 @@ function Home() {
               ease: [0, 0.71, 0.2, 1.01],
             }}
           >
-            <Card className="aboutCard" sx={{ maxWidth: "100%", height: "400px",borderRadius:"10px",backgroundColor:"transparent" }}>
+            <Card
+              className="aboutCard"
+              sx={{
+                maxWidth: "100%",
+                height: "400px",
+                borderRadius: "10px",
+                backgroundColor: "transparent",
+              }}
+            >
               <div className="imageSection">
-              <CardMedia
-                component="img"
-                alt="Image About Us"
-                height="400"
-                image={aboutUsImage}
-              />
+                <CardMedia
+                  component="img"
+                  alt="Image About Us"
+                  height="400"
+                  image={aboutUsImage}
+                />
               </div>
               <div className="contentSection">
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div" color="white">
-                  About Us
-                </Typography>
-                <Typography variant="body2" color="white">
-                  Mechno Dream Industry is a Young, Efficient and Passionate
-                  workstation where all your industrial dreams would be brought
-                  into reality…
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button
-                  variant="contained"
-                  style={{
-                    backgroundColor: "rgb(206,211,220)",
-                    color: "black",
-                  }}
-                >
-                 <Link to="/about">Know More</Link> 
-                </Button>
-              </CardActions>
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    color="white"
+                  >
+                    About Us
+                  </Typography>
+                  <Typography variant="body2" color="white">
+                    Mechno Dream Industry is a Young, Efficient and Passionate
+                    workstation where all your industrial dreams would be
+                    brought into reality…
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    variant="contained"
+                    style={{
+                      backgroundColor: "rgb(206,211,220)",
+                      color: "black",
+                    }}
+                  >
+                    <Link to="/about">Know More</Link>
+                  </Button>
+                </CardActions>
               </div>
             </Card>
           </motion.div>

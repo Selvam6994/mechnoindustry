@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import automation from "../src/assets/Images/Automation.webp";
 import industrialService from "../src/assets/Images/Industrial Services.webp";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Link } from "react-router-dom";
 
 function Homecompnents() {
   const matches = useMediaQuery("(min-width:870px)");
@@ -18,12 +19,14 @@ function Homecompnents() {
       title: "Industrial Services",
       content:
         "We fulfill all your industrial needs to make your organization much efficient and profitable",
+      link: "/services",
     },
     {
       image: industrialService,
       title: "Automation",
       content:
         "Towards the Era of Industrial Automation! A destination where you can visualize the reality of moving your company into the Innovation driven Automation World",
+      link: "/automation",
     },
   ];
 
@@ -77,7 +80,7 @@ function Homecompnents() {
                           color: "black",
                         }}
                       >
-                        Know More
+                        <Link to={data.link}> Know More</Link>
                       </Button>
                     </CardActions>
                   </div>
@@ -114,18 +117,12 @@ function Homecompnents() {
                     height="140"
                     image={data.image}
                   />
-                  <div
-                    key={cardContent.title}
-                    className="cardContentSection"
-                   
-                  >
-                    <CardContent  style={{ color: "white" }}>
+                  <div key={cardContent.title} className="cardContentSection">
+                    <CardContent style={{ color: "white" }}>
                       <Typography gutterBottom variant="h5" component="div">
                         {data.title}
                       </Typography>
-                      <Typography variant="body2" >
-                        {data.content}
-                      </Typography>
+                      <Typography variant="body2">{data.content}</Typography>
                     </CardContent>
                     <CardActions>
                       <Button
@@ -135,7 +132,7 @@ function Homecompnents() {
                           color: "black",
                         }}
                       >
-                        Know More
+                        <Link to={data.link}> Know More</Link>
                       </Button>
                     </CardActions>
                   </div>

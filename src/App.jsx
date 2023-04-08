@@ -11,12 +11,6 @@ import About from "./About";
 import { Route, Routes, Link } from "react-router-dom";
 import logo from "../src/assets/Images/Logo.webp";
 import Gallery from "./Gallery";
-// import ListItemAvatar from "@mui/material/ListItemAvatar";
-// import Avatar from "@mui/material/Avatar";
-// import ImageIcon from "@mui/icons-material/Image";
-// import WorkIcon from "@mui/icons-material/Work";
-// import BeachAccessIcon from "@mui/icons-material/BeachAccess";
-// import Divider from "@mui/material/Divider";
 
 function App() {
   const appWidth = useMediaQuery("(min-width:1105px)");
@@ -36,7 +30,7 @@ function App() {
     },
     {
       optionName: "Services",
-      linkTo: "/indutrial",
+      linkTo: "/services",
     },
     {
       optionName: "Gallery",

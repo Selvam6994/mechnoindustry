@@ -212,12 +212,12 @@ li {
   height: 100%;
   min-width: 280px;
 }
-.aboutPage {
+.aboutSectionBefore {
   /* border: 2px solid green; */
-  margin: 150px 0 0 0;
+  margin: 100px 0 0 0;
   width: 100%;
   min-width: 280px;
-  height: 350px;
+  height: fit-content;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -225,10 +225,23 @@ li {
   justify-content: center;
   align-items: center;
 }
-.aboutUsCard {
+.aboutSectionAfter {
+  /* border: 2px solid green; */
+  margin: 200px 0 0 0;
+  width: 100%;
+  min-width: 280px;
+  height: fit-content;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUsCardBefore {
   width: 80%;
   min-width: 280px;
-  height: 350px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -237,6 +250,18 @@ li {
   background-color: rgba(61, 61, 61, 0.95);
   border-radius: 10px;
 }
+/* .aboutUsCardAfter {
+  width: 80%;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(61, 61, 61, 0.95);
+  border-radius: 10px;
+} */
 .aboutUs {
   color: rgb(1, 113, 249);
   display: flex;
@@ -245,10 +270,34 @@ li {
   justify-content: center;
   align-items: center;
 }
-.IconCard {
+.IconCardBefore {
   width: 100%;
   min-width: 280px;
-  margin: 800px 0 0 0;
+  margin:675px 0 0 0;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.IconCardat980px {
+  width: 100%;
+  min-width: 280px;
+  margin: 600px 0 0 0;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.IconCardat500px{
+  width: 100%;
+  min-width: 280px;
+  margin: 1000px 0 0 0;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -270,7 +319,7 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  gap: 0.5rem;
   background-color: rgba(1, 114, 249, 0.75);
   color: rgb(61, 61, 61);
 }
@@ -284,19 +333,17 @@ li {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
 }
-/* .clientIcons{
-  border: 2px solid rgb(128, 0, 0);
- 
- 
-} */
-.visionPage {
+
+
+.visionPageBefore {
   /* border: 2px solid green; */
 
   width: 100%;
   min-width: 280px;
-
+margin-top: 1050px;
+height: fit-content;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -304,10 +351,24 @@ li {
   justify-content: center;
   align-items: center;
 }
-.visionCard {
+
+/* .visionPageAfter {
+ 
+
+  width: 100%;
+  min-width: 280px;
+  margin-top: 1030px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+} */
+.visionCardBefore {
   width: 80%;
   min-width: 280px;
-  height: 300px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -316,6 +377,18 @@ li {
   background-color: rgba(61, 61, 61, 0.95);
   border-radius: 10px;
 }
+/* .visionCardAfter {
+  width: 80%;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(61, 61, 61, 0.95);
+  border-radius: 10px;
+} */
 .vision {
   color: rgb(1, 113, 249);
   display: flex;
@@ -361,8 +434,11 @@ li {
 .footerSectionAfter {
   position: absolute;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
   background-color: rgba(61, 61, 61, 0.95);
   width: 100%;
   min-width: 320px;
@@ -386,7 +462,19 @@ li {
 }
 .emailUsForm {
   border: 2px solid green;
+  /* background-color: rgba(1, 113, 249, 0.389); */
   height: 400px;
   width: 400px;
   margin: 0px 100px 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.emailButton{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
