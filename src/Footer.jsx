@@ -6,6 +6,8 @@ import faceBook from "../src/assets/Images/Social Icons/facebook.png";
 import linkedin from "../src/assets/Images/Social Icons/linkedin.png";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
 
 function Footer() {
   const socialMedia = [
@@ -26,7 +28,7 @@ function Footer() {
     },
   ];
   const footerMatches = useMediaQuery("(min-width:870px)");
-const [form,setForm] = useState(false)
+  const [form, setForm] = useState(false);
   return (
     <div className="footer">
       {footerMatches == true ? (
@@ -94,6 +96,24 @@ const [form,setForm] = useState(false)
         </div>
       ) : (
         <div className="footerSectionAfter">
+          {form == true ? (
+            <Box
+              className="emailButtonForm"
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                "& > :not(style)": {
+                  m: 1,
+                  minWidth: 280,
+                  height: 350,
+                },
+              }}
+            >
+              <Paper className="form" elevation={3}></Paper>
+            </Box>
+          ) : (
+            ""
+          )}
           <div className="contactDetails" style={{ color: "white" }}>
             <img className="logo" src={logo}></img>
             <h3>Mechno Dream Industry</h3>
@@ -117,8 +137,17 @@ const [form,setForm] = useState(false)
               ))}
             </div>
           </div>
+
           <div className="emailButton">
-            <Button variant="outlined" onClick={()=>(setForm(true))}>Let's get connected</Button>
+            <Button
+              variant="contained"
+              color="success"
+              onClick={() => {
+                form == false ? setForm(true) : setForm(false);
+              }}
+            >
+              Let's get connected
+            </Button>
           </div>
         </div>
       )}
