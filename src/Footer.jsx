@@ -1,5 +1,6 @@
 import { useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import logo from "../src/assets/Images/Logo.webp";
 import insta from "../src/assets/Images/Social Icons/instagram.png";
 import faceBook from "../src/assets/Images/Social Icons/facebook.png";
@@ -97,20 +98,73 @@ function Footer() {
       ) : (
         <div className="footerSectionAfter">
           {form == true ? (
-            <Box
+            <motion.div
               className="emailButtonForm"
-              sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                "& > :not(style)": {
-                  m: 1,
-                  minWidth: 280,
-                  height: 350,
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
                 },
               }}
             >
-              <Paper className="form" elevation={3}></Paper>
-            </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  "& > :not(style)": {
+                    m: 1,
+                    minWidth: 280,
+                    height: 350,
+                  },
+                }}
+              >
+                <Paper className="form" elevation={3}>
+                  <form className="mobileEmailForm">
+                    <TextField
+                      label="Name"
+                      type="text"
+                      color="primary"
+                      id="outlined-size-small"
+                      size="small"
+                      focused
+                    />
+                    <TextField
+                      label="Email"
+                      type="email"
+                      color="primary"
+                      id="outlined-size-small"
+                      size="small"
+                      focused
+                    />
+                    <TextField
+                      label="Phone Number"
+                      type="number"
+                      color="primary"
+                      id="outlined-size-small"
+                      size="small"
+                      focused
+                    />
+                    <TextField
+                      id="outlined-textarea"
+                      label="Message"
+                      color="primary"
+                      placeholder="Type your message here."
+                      multiline
+                      focused
+                    />
+                    <Button type="submit" variant="contained">
+                      Send
+                    </Button>
+                  </form>
+                </Paper>
+              </Box>
+            </motion.div>
           ) : (
             ""
           )}

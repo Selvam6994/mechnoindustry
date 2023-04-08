@@ -480,6 +480,15 @@ height: fit-content;
   margin-top: 100px;
   width: 50%;
 }
+.mobileEmailForm{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+margin-top: 50px;
+gap: 1rem;
+}
 .emailButtonForm{
   /* border: 2px solid green; */
   /* min-width: 280px;
