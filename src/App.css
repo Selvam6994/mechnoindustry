@@ -352,19 +352,19 @@ height: fit-content;
   align-items: center;
 }
 
-/* .visionPageAfter {
+.visionPageAfter {
  
 
   width: 100%;
   min-width: 280px;
-  margin-top: 1030px;
+  margin-top: 1230px;
   position: absolute;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-} */
+}
 .visionCardBefore {
   width: 80%;
   min-width: 280px;
@@ -426,7 +426,7 @@ height: fit-content;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  min-width: 320px;
+  min-width: 280px;
   height: 400px;
   margin: 1350px 0 0 0;
   background-color: rgba(61, 61, 61, 0.95);
@@ -441,7 +441,7 @@ height: fit-content;
   gap: 1rem;
   background-color: rgba(61, 61, 61, 0.95);
   width: 100%;
-  min-width: 320px;
+  min-width: 280px;
   height: 400px;
   margin: 1800px 0 0 0;
 }

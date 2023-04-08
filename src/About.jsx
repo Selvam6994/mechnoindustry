@@ -139,8 +139,8 @@ function About() {
       {iconsSpringAction == true ? (
         <motion.div
           className={pageWidth1==false? "IconCardat980px":"IconCardBefore"}
-          initial={pageWidth1==false?{ y: 200 }:{ y: 100 }}
-          animate={pageWidth1==false?{ y: 200 }:{ y: 0 }}
+          initial={pageWidth1==false?{ y: 500 }:{ y: 100 }}
+          animate={pageWidth1==false?{ y: 300 }:{ y: 0 }}
           transition={{
             type: "spring",
             duration: 2,
@@ -178,13 +178,13 @@ function About() {
         ""
       )}
 
-      <div className="visionPageBefore">
+      <div className={pageWidth1==false?"visionPageAfter":"visionPageBefore"}>
         {springAction == true ? (
           <motion.div
             className="visionCardBefore"
             initial={{ y: 100 }}
             animate={{ y: 0 }}
-            transition={{ type: "spring", duration: 1.5 }}
+            transition={{ type: "spring", duration: 2.5 }}
           >
             <div className="vision">
               <h1>Vision & Mission</h1>
