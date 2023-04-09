@@ -415,11 +415,21 @@ height: fit-content;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
   width: 100%;
   margin: 100px 0 0 0;
 }
+/* .footer{
+  border: 2px solid green;
+  position: absolute;
 
+
+  width: 100%;
+  min-width: 280px;
+  height: 100px;
+  margin: 1350px 0 0 0;
+  
+  background-color: rgba(61, 61, 61, 0.95);
+} */
 
 .footerSectionBefore {
   position: absolute;
@@ -428,8 +438,9 @@ height: fit-content;
   justify-content: space-between;
   width: 100%;
   min-width: 280px;
-  height: 400px;
+  height: fit-content;
   margin: 1350px 0 0 0;
+  
   background-color: rgba(61, 61, 61, 0.95);
 }
 .footerSectionAfter {
@@ -443,7 +454,7 @@ height: fit-content;
   background-color: rgba(61, 61, 61, 0.95);
   width: 100%;
   min-width: 280px;
-  height: 500px;
+  height: fit-content;
   margin: 1800px 0 0 0;
 }
 .socialMediaSection {
@@ -457,6 +468,7 @@ height: fit-content;
   justify-content: center;
   align-items: center;
   margin: 0px 100px 0 100px;
+  
 }
 .logo {
   width: 100px;
@@ -464,7 +476,7 @@ height: fit-content;
 .emailUsForm {
   border: 2px solid green;
   /* background-color: rgba(1, 113, 249, 0.389); */
-  height: 400px;
+  height: fit-content;
   width: 400px;
   margin: 0px 100px 0 100px;
   display: flex;

@@ -77,7 +77,6 @@ function About() {
     },
   ];
   const pageWidth1 = useMediaQuery("(min-width:980px)");
-   const pageWidth2 = useMediaQuery("(min-width:500px)");
   const [springAction, setSpringAction] = useState(false);
   const [iconsSpringAction, setIconSpringAction] = useState(false);
   const scrollForIcons = () => {
@@ -99,9 +98,15 @@ function About() {
   };
   window.addEventListener("scroll", scrollForVisionCard);
   window.addEventListener("scroll", scrollForIcons);
+
+
   return (
     <div className="aboutUsMain">
-      <div className={pageWidth1==false?"aboutSectionAfter":"aboutSectionBefore"}>
+      <div
+        className={
+          pageWidth1 == false ? "aboutSectionAfter" : "aboutSectionBefore"
+        }
+      >
         <motion.div
           className="aboutUsCardBefore"
           initial={{ opacity: 0, scale: 0.5 }}
@@ -116,15 +121,13 @@ function About() {
             <h1>About Us</h1>
             <span>
               Mechno Dream Industry is a Young, Efficient and Passionate
-              workstation{" "}
+              workstation
             </span>
             <span>
-              {" "}
               where all your industrial dreams would be brought into reality.{" "}
             </span>
 
             <span>
-              {" "}
               The organization is established with the moto of converting the
               core mechanical industry into an Automation driven industry{" "}
             </span>
@@ -138,9 +141,9 @@ function About() {
       </div>
       {iconsSpringAction == true ? (
         <motion.div
-          className={pageWidth1==false? "IconCardat980px":"IconCardBefore"}
-          initial={pageWidth1==false?{ y: 500 }:{ y: 100 }}
-          animate={pageWidth1==false?{ y: 300 }:{ y: 0 }}
+          className={pageWidth1 == false ? "IconCardat980px" : "IconCardBefore"}
+          initial={pageWidth1 == false ? { y: 500 } : { y: 100 }}
+          animate={pageWidth1 == false ? { y: 300 } : { y: 0 }}
           transition={{
             type: "spring",
             duration: 2,
@@ -160,11 +163,19 @@ function About() {
                   }}
                 >
                   <Card
-                    sx={pageWidth1==true?{ width: "150px", height: "150px", margin: "20px 0" }:{ width: "80px", height: "80px", margin: "5px 0" }}
+                    sx={
+                      pageWidth1 == true
+                        ? { width: "150px", height: "150px", margin: "20px 0" }
+                        : { width: "80px", height: "80px", margin: "5px 0" }
+                    }
                     className="clientIcons"
                   >
                     <img
-                      style={pageWidth1==true?{ width: "150px", height: "150px" }:{ width: "80px", height: "80px", margin: "5px 0" }}
+                      style={
+                        pageWidth1 == true
+                          ? { width: "150px", height: "150px" }
+                          : { width: "80px", height: "80px", margin: "5px 0" }
+                      }
                       src={images.clientImage}
                       alt="Client Images"
                     />
@@ -178,7 +189,9 @@ function About() {
         ""
       )}
 
-      <div className={pageWidth1==false?"visionPageAfter":"visionPageBefore"}>
+      <div
+        className={pageWidth1 == false ? "visionPageAfter" : "visionPageBefore"}
+      >
         {springAction == true ? (
           <motion.div
             className="visionCardBefore"

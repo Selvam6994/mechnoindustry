@@ -9,6 +9,8 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 function Footer() {
   const socialMedia = [
@@ -30,6 +32,39 @@ function Footer() {
   ];
   const footerMatches = useMediaQuery("(min-width:870px)");
   const [form, setForm] = useState(false);
+
+  let userSchema = yup.object({
+    name: yup.string().required("Required"),
+    email: yup.string().required("Required"),
+    phone: yup.number().required("Required"),
+    subject: yup.string(),
+    message: yup.string().required("Required"),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    },
+    validationSchema: userSchema,
+    onSubmit: async (values) => {
+      const sendData = await fetch("http://localhost:4000/", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (sendData.status == 200) {
+        const result = await sendData.json();
+        console.log("success");
+      } else {
+        console.log("failed");
+      }
+    },
+  });
+
   return (
     <div className="footer">
       {footerMatches == true ? (
@@ -56,40 +91,78 @@ function Footer() {
               ))}
             </div>
           </div>
-
-          <form className="emailUsForm">
+          <form className="emailUsForm" onSubmit={formik.handleSubmit}>
             <TextField
               label="Name"
               type="text"
               color="primary"
               id="outlined-size-small"
               size="small"
-              focused
+              name="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             />
+            {formik.touched.name && formik.errors.name ? (
+              <span style={{ color: "red" }}>{formik.errors.name}</span>
+            ) : (
+              ""
+            )}
             <TextField
               label="Email"
               type="email"
               color="primary"
               id="outlined-size-small"
               size="small"
-              focused
+              name="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             />
+            {formik.touched.email && formik.errors.email ? (
+              <span style={{ color: "red" }}>{formik.errors.email}</span>
+            ) : (
+              ""
+            )}
             <TextField
               label="Phone Number"
               type="number"
               color="primary"
               id="outlined-size-small"
               size="small"
-              focused
+              name="phone"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             />
+            {formik.touched.phone && formik.errors.phone ? (
+              <span style={{ color: "red" }}>{formik.errors.phone}</span>
+            ) : (
+              ""
+            )}
+            <TextField
+              id="outlined-textarea"
+              label="Subject"
+              color="primary"
+              placeholder="Subject"
+              multiline
+              name="subject"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+
             <TextField
               id="outlined-textarea"
               label="Message"
               color="primary"
               placeholder="Type your message here."
               multiline
-              focused
+              name="message"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
             />
+            {formik.touched.message && formik.errors.message ? (
+              <span style={{ color: "red" }}>{formik.errors.message}</span>
+            ) : (
+              ""
+            )}
             <Button type="submit" variant="contained">
               Send
             </Button>
@@ -125,39 +198,87 @@ function Footer() {
                 }}
               >
                 <Paper className="form" elevation={3}>
-                  <form className="mobileEmailForm">
+                  <form
+                    className="mobileEmailForm"
+                    onSubmit={formik.handleSubmit}
+                  >
                     <TextField
                       label="Name"
                       type="text"
                       color="primary"
                       id="outlined-size-small"
                       size="small"
-                      focused
+                      name="name"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
+                    {formik.touched.name && formik.errors.name ? (
+                      <span style={{ color: "red" }}>{formik.errors.name}</span>
+                    ) : (
+                      ""
+                    )}
                     <TextField
                       label="Email"
                       type="email"
                       color="primary"
                       id="outlined-size-small"
                       size="small"
-                      focused
+                      name="email"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
+                    {formik.touched.email && formik.errors.email ? (
+                      <span style={{ color: "red" }}>
+                        {formik.errors.email}
+                      </span>
+                    ) : (
+                      ""
+                    )}
                     <TextField
                       label="Phone Number"
                       type="number"
                       color="primary"
                       id="outlined-size-small"
                       size="small"
-                      focused
+                      name="phone"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
+                    {formik.touched.phone && formik.errors.phone ? (
+                      <span style={{ color: "red" }}>
+                        {formik.errors.phone}
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                    <TextField
+                      id="outlined-textarea"
+                      label="Subject"
+                      color="primary"
+                      placeholder="Subject"
+                      multiline
+                      name="subject"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+
                     <TextField
                       id="outlined-textarea"
                       label="Message"
                       color="primary"
                       placeholder="Type your message here."
                       multiline
-                      focused
+                      name="message"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
+                    {formik.touched.message && formik.errors.message ? (
+                      <span style={{ color: "red" }}>
+                        {formik.errors.message}
+                      </span>
+                    ) : (
+                      ""
+                    )}
                     <Button type="submit" variant="contained">
                       Send
                     </Button>
