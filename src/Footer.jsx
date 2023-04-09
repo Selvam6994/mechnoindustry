@@ -51,7 +51,7 @@ function Footer() {
     },
     validationSchema: userSchema,
     onSubmit: async (values) => {
-      const sendData = await fetch("http://localhost:4000/", {
+      const sendData = await fetch("https://mechno-backend.onrender.com", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(values),
