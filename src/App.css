@@ -273,7 +273,7 @@ li {
 .IconCardBefore {
   width: 100%;
   min-width: 280px;
-  margin:675px 0 0 0;
+  margin: 675px 0 0 0;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -294,7 +294,7 @@ li {
   align-items: center;
   height: fit-content;
 }
-.IconCardat500px{
+.IconCardat500px {
   width: 100%;
   min-width: 280px;
   margin: 1000px 0 0 0;
@@ -336,14 +336,13 @@ li {
   gap: 0.5rem;
 }
 
-
 .visionPageBefore {
   /* border: 2px solid green; */
 
   width: 100%;
   min-width: 280px;
-margin-top: 1050px;
-height: fit-content;
+  margin-top: 1050px;
+  height: fit-content;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -353,8 +352,6 @@ height: fit-content;
 }
 
 .visionPageAfter {
- 
-
   width: 100%;
   min-width: 280px;
   margin-top: 1230px;
@@ -440,7 +437,7 @@ height: fit-content;
   min-width: 280px;
   height: fit-content;
   margin: 1350px 0 0 0;
-  
+
   background-color: rgba(61, 61, 61, 0.95);
 }
 .footerSectionAfter {
@@ -468,7 +465,6 @@ height: fit-content;
   justify-content: center;
   align-items: center;
   margin: 0px 100px 0 100px;
-  
 }
 .logo {
   width: 100px;
@@ -485,34 +481,34 @@ height: fit-content;
   align-items: center;
   gap: 2rem;
 }
-.emailButton{
+.emailButton {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
   width: 50%;
 }
-.mobileEmailForm{
-
+.mobileEmailForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-/* margin-top: 100px; */
-gap: 1rem;
+  /* margin-top: 100px; */
+  gap: 1rem;
 }
-.emailStatus{
+.emailStatus {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.emailButtonForm{
+.emailButtonForm {
   /* border: 2px solid green; */
   /* min-width: 280px;
   height: 350px; */
   position: absolute;
-  /* height: 400px;
-  width: 400px;
-  min-width: 280px; */
+  /* margin-top: 150px; */
+
+  /* width: 400px;
+  min-width: 280px;  */
 }

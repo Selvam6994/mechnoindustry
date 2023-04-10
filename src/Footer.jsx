@@ -95,6 +95,7 @@ function Footer() {
             </div>
           </div>
           <form className="emailUsForm" onSubmit={formik.handleSubmit}>
+           {formMessage==false? <div className="emailUsForm">
             <TextField
               sx={{ input: { color: "white" } }}
               label={
@@ -196,6 +197,58 @@ function Footer() {
             <Button type="submit" variant="contained">
               Send
             </Button>
+            </div>:  <motion.div
+                      className="emailButtonForm"
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: [0, 0.71, 0.2, 1.01],
+                        scale: {
+                          type: "spring",
+                          damping: 10,
+                          stiffness: 100,
+                          restDelta: 0.001,
+                        },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          "& > :not(style)": {
+                            m: 1,
+                            minWidth: 280,
+                            height: "fitContent",
+                            marginTop:"150px"
+                          },
+                        }}
+                      >
+                        <Paper
+                          className="emailStatus"
+                          elevation={3}
+                          style={{
+                            color: "rgb(61, 61, 61)",
+                            backgroundColor: "rgb(1, 114, 249)",
+                          }}
+                        >
+                          <h3>
+                            We received your mail, our team will get back to you
+                            soon.
+                          </h3>
+                          <Button
+                            variant="contained"
+                            color="error"
+                            onClick={() => {
+                              setFormMessage(false);
+                              setForm(false);
+                            }}
+                          >
+                            Close
+                          </Button>
+                        </Paper>
+                      </Box>
+                    </motion.div>}
           </form>
         </div>
       ) : (
@@ -234,7 +287,6 @@ function Footer() {
                       onSubmit={formik.handleSubmit}
                     >
                       <TextField
-                      
                         label={
                           formik.touched.name && formik.errors.name ? (
                             <span
@@ -254,7 +306,6 @@ function Footer() {
                       />
 
                       <TextField
-                       
                         label={
                           formik.touched.email && formik.errors.email ? (
                             <span
@@ -274,7 +325,6 @@ function Footer() {
                       />
 
                       <TextField
-                       
                         label={
                           formik.touched.phone && formik.errors.phone ? (
                             <span

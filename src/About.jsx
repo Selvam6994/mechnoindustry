@@ -99,7 +99,6 @@ function About() {
   window.addEventListener("scroll", scrollForVisionCard);
   window.addEventListener("scroll", scrollForIcons);
 
-
   return (
     <div className="aboutUsMain">
       <div
