@@ -234,7 +234,7 @@ function Footer() {
                       onSubmit={formik.handleSubmit}
                     >
                       <TextField
-                        sx={{ input: { color: "white" } }}
+                      
                         label={
                           formik.touched.name && formik.errors.name ? (
                             <span
@@ -254,7 +254,7 @@ function Footer() {
                       />
 
                       <TextField
-                        sx={{ input: { color: "white" } }}
+                       
                         label={
                           formik.touched.email && formik.errors.email ? (
                             <span
@@ -274,7 +274,7 @@ function Footer() {
                       />
 
                       <TextField
-                        sx={{ input: { color: "white" } }}
+                       
                         label={
                           formik.touched.phone && formik.errors.phone ? (
                             <span
