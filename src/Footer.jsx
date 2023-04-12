@@ -53,7 +53,7 @@ function Footer() {
     //https://mechno-backend.onrender.com
     validationSchema: userSchema,
     onSubmit: async (values) => {
-      const sendData = await fetch("https://mechno-backend.onrender.com", {
+      const sendData = await fetch("https://mechnodream-backend.onrender.com", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(values),
