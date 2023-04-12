@@ -456,7 +456,7 @@ function Footer() {
           ) : (
             ""
           )}
-          <div className="contactDetails" style={{ color: "white" }}>
+          <div className="contactDetailsAfter" style={{ color: "white" }}>
             <img className="logo" src={logo}></img>
             <h3>Mechno Dream Industry</h3>
             <span>T-343,Sidco Women</span>
