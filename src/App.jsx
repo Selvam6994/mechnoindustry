@@ -36,10 +36,7 @@ function App() {
       optionName: "Gallery",
       linkTo: "/gallery",
     },
-    {
-      optionName: "Contact",
-      linkTo: "/contact",
-    },
+   
   ];
 
   const scrollDown = () => {
@@ -59,6 +56,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/footer" element={<Footer />} />
       </Routes>
       {appWidth == true ? (
         <div className={navbar == false ? "navBar" : "navBarActive"}>

@@ -95,160 +95,163 @@ function Footer() {
             </div>
           </div>
           <form className="emailUsForm" onSubmit={formik.handleSubmit}>
-           {formMessage==false? <div className="emailUsForm">
-            <TextField
-              sx={{ input: { color: "white" } }}
-              label={
-                formik.touched.name && formik.errors.name ? (
-                  <span
-                    style={{ color: "red" }}
-                  >{`Name${formik.errors.name}`}</span>
-                ) : (
-                  "Name"
-                )
-              }
-              type="text"
-              color="success"
-              id="outlined-size-small"
-              size="small"
-              name="name"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
+            {formMessage == false ? (
+              <div className="emailUsForm">
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  label={
+                    formik.touched.name && formik.errors.name ? (
+                      <span
+                        style={{ color: "red" }}
+                      >{`Name${formik.errors.name}`}</span>
+                    ) : (
+                      "Name"
+                    )
+                  }
+                  type="text"
+                  color="success"
+                  id="outlined-size-small"
+                  size="small"
+                  name="name"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
 
-            <TextField
-              sx={{ input: { color: "white" } }}
-              label={
-                formik.touched.email && formik.errors.email ? (
-                  <span
-                    style={{ color: "red" }}
-                  >{`Email${formik.errors.email}`}</span>
-                ) : (
-                  "Email"
-                )
-              }
-              type="email"
-              color="success"
-              id="outlined-size-small"
-              size="small"
-              name="email"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  label={
+                    formik.touched.email && formik.errors.email ? (
+                      <span
+                        style={{ color: "red" }}
+                      >{`Email${formik.errors.email}`}</span>
+                    ) : (
+                      "Email"
+                    )
+                  }
+                  type="email"
+                  color="success"
+                  id="outlined-size-small"
+                  size="small"
+                  name="email"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
 
-            <TextField
-              sx={{ input: { color: "white" } }}
-              label={
-                formik.touched.phone && formik.errors.phone ? (
-                  <span
-                    style={{ color: "red" }}
-                  >{`Phone ${formik.errors.phone}`}</span>
-                ) : (
-                  "Phone Number"
-                )
-              }
-              type="text"
-              color="success"
-              id="outlined-size-small"
-              size="small"
-              name="phone"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
+                <TextField
+                  sx={{ input: { color: "white" } }}
+                  label={
+                    formik.touched.phone && formik.errors.phone ? (
+                      <span
+                        style={{ color: "red" }}
+                      >{`Phone ${formik.errors.phone}`}</span>
+                    ) : (
+                      "Phone Number"
+                    )
+                  }
+                  type="text"
+                  color="success"
+                  id="outlined-size-small"
+                  size="small"
+                  name="phone"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
 
-            <TextField
-              id="outlined-textarea"
-              label={
-                formik.touched.subject && formik.errors.subject ? (
-                  <span
-                    style={{ color: "red" }}
-                  >{`Subject${formik.errors.subject}`}</span>
-                ) : (
-                  "Subject"
-                )
-              }
-              color="success"
-              placeholder="Subject"
-              multiline
-              name="subject"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
+                <TextField
+                  id="outlined-textarea"
+                  label={
+                    formik.touched.subject && formik.errors.subject ? (
+                      <span
+                        style={{ color: "red" }}
+                      >{`Subject${formik.errors.subject}`}</span>
+                    ) : (
+                      "Subject"
+                    )
+                  }
+                  color="success"
+                  placeholder="Subject"
+                  multiline
+                  name="subject"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
 
-            <TextField
-              id="outlined-textarea"
-              label={
-                formik.touched.message && formik.errors.message ? (
-                  <span
-                    style={{ color: "red" }}
-                  >{`Message${formik.errors.message}`}</span>
-                ) : (
-                  "Message"
-                )
-              }
-              color="success"
-              placeholder="Type your message here."
-              multiline
-              name="message"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
+                <TextField
+                  id="outlined-textarea"
+                  label={
+                    formik.touched.message && formik.errors.message ? (
+                      <span
+                        style={{ color: "red" }}
+                      >{`Message${formik.errors.message}`}</span>
+                    ) : (
+                      "Message"
+                    )
+                  }
+                  color="success"
+                  placeholder="Type your message here."
+                  multiline
+                  name="message"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
 
-            <Button type="submit" variant="contained">
-              Send
-            </Button>
-            </div>:  <motion.div
-                      className="emailButtonForm"
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{
-                        duration: 0.3,
-                        ease: [0, 0.71, 0.2, 1.01],
-                        scale: {
-                          type: "spring",
-                          damping: 10,
-                          stiffness: 100,
-                          restDelta: 0.001,
-                        },
+                <Button type="submit" variant="contained">
+                  Send
+                </Button>
+              </div>
+            ) : (
+              <motion.div
+                className="emailButtonForm"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  scale: {
+                    type: "spring",
+                    damping: 10,
+                    stiffness: 100,
+                    restDelta: 0.001,
+                  },
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    "& > :not(style)": {
+                      m: 1,
+                      minWidth: 280,
+                      height: "fitContent",
+                      marginTop: "150px",
+                    },
+                  }}
+                >
+                  <Paper
+                    className="emailStatus"
+                    elevation={3}
+                    style={{
+                      color: "rgb(61, 61, 61)",
+                      backgroundColor: "rgb(1, 114, 249)",
+                    }}
+                  >
+                    <h3>
+                      We received your mail, our team will get back to you soon.
+                    </h3>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      onClick={() => {
+                        setFormMessage(false);
+                        setForm(false);
                       }}
                     >
-                      <Box
-                        sx={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                          "& > :not(style)": {
-                            m: 1,
-                            minWidth: 280,
-                            height: "fitContent",
-                            marginTop:"150px"
-                          },
-                        }}
-                      >
-                        <Paper
-                          className="emailStatus"
-                          elevation={3}
-                          style={{
-                            color: "rgb(61, 61, 61)",
-                            backgroundColor: "rgb(1, 114, 249)",
-                          }}
-                        >
-                          <h3>
-                            We received your mail, our team will get back to you
-                            soon.
-                          </h3>
-                          <Button
-                            variant="contained"
-                            color="error"
-                            onClick={() => {
-                              setFormMessage(false);
-                              setForm(false);
-                            }}
-                          >
-                            Close
-                          </Button>
-                        </Paper>
-                      </Box>
-                    </motion.div>}
+                      Close
+                    </Button>
+                  </Paper>
+                </Box>
+              </motion.div>
+            )}
           </form>
         </div>
       ) : (
