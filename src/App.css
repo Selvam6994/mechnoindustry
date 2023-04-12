@@ -467,17 +467,17 @@ li {
   justify-content: center;
   align-items: center;
   margin: 0px 100px 0 100px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   min-width: 280px;}
 
   .contactDetailsAfter {
-    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0px 100px 0 100px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 100%;
   }
 .logo {
