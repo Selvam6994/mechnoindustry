@@ -415,24 +415,45 @@ li {
   width: 100%;
   margin: 100px 0 0 0;
 }
-/* .footer{
-  border: 2px solid green;
+.quotationPage{
   position: absolute;
-
-
+  /* border: 2px solid rgb(255, 255, 255); */
   width: 100%;
   min-width: 280px;
-  height: 100px;
-  margin: 1350px 0 0 0;
-  
-  background-color: rgba(61, 61, 61, 0.95);
-} */
+  height: fit-content;
+  margin: 250px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap
+}
+.quotationPaper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:1rem
+}
+.emailSendButton{
+  margin: 100px 0 0 0; 
+}
+.uploadFiles{
+  margin: 350px 0 0 0;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+
+}
+
 
 .footerSectionBefore {
   position: absolute;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   min-width: 280px;
   height: fit-content;
@@ -451,7 +472,7 @@ li {
   gap: 1rem;
   background-color: rgba(61, 61, 61, 0.95);
   width: 100%;
-  min-width: 280px;
+  min-width: 320px;
   height: fit-content;
   margin: 1800px 0 0 0;
 }
@@ -486,14 +507,64 @@ li {
 .emailUsForm {
   /* border: 2px solid green; */
   /* background-color: rgba(1, 113, 249, 0.389); */
+  position: relative;
   height: fit-content;
-  width: 400px;
-  margin: 10px 100px 0 100px;
+  width: 100%;
+  /* margin: 10px 100px 0 100px; */
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  align-content: center;
+  gap: 1rem;
+}
+.emailUsFormPaper{
+  /* border: 2px solid green; */
+  position: relative;
+  height: fit-content;
+  width: 30%;
+  min-width: 280px;
+  height: 100px;
+  /* margin: 10px 100px 0 100px; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+ 
+}
+.emailUsFileFormPaper{
+  /* border: 2px solid green; */
+  position: relative;
+  height: fit-content;
+  width: 30%;
+  min-width: 280px;
+  height: 200px;
+  /* margin: 10px 100px 0 100px; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+.checkBox{
+  width: fit-content;
+  /* border: 2px solid green; */
+  min-width: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+height: 100px;
+}
+.others{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .emailButton {
   display: flex;
@@ -502,27 +573,10 @@ li {
   margin-top: 10px;
   width: 50%;
 }
-.mobileEmailForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 100px; */
-  gap: 1rem;
-}
+
 .emailStatus {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.emailButtonForm {
-  /* border: 2px solid green; */
-  /* min-width: 280px;
-  height: 350px; */
-  position: absolute;
-  /* margin-top: 150px; */
-
-  /* width: 400px;
-  min-width: 280px;  */
 }

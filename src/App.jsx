@@ -11,6 +11,7 @@ import About from "./About";
 import { Route, Routes, Link } from "react-router-dom";
 import logo from "../src/assets/Images/Logo.webp";
 import Gallery from "./Gallery";
+import Quotation from "./Quotation";
 
 function App() {
   const appWidth = useMediaQuery("(min-width:1105px)");
@@ -36,7 +37,10 @@ function App() {
       optionName: "Gallery",
       linkTo: "/gallery",
     },
-   
+    {
+      optionName: "Get Quote",
+      linkTo: "/quotation",
+    },
   ];
 
   const scrollDown = () => {
@@ -57,6 +61,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/quotation" element={<Quotation />} />
       </Routes>
       {appWidth == true ? (
         <div className={navbar == false ? "navBar" : "navBarActive"}>
