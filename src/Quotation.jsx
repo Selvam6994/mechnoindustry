@@ -41,7 +41,7 @@ function Quotation() {
       if (formik_email.values.file != "") {
         const data = new FormData();
         data.append("file", values.file);
-        const uploadFile = await fetch("http://localhost:4000/", {
+        const uploadFile = await fetch("https://mechnodream-backend.onrender.com/", {
           method: "POST",
           headers: new Headers({ Accept: "application/json" }),
           body: data,
@@ -53,7 +53,7 @@ function Quotation() {
         } else {
           console.log("failed");
         }
-        const sendData = await fetch(`http://localhost:4000/attachmentemail`, {
+        const sendData = await fetch(`https://mechnodream-backend.onrender.com/attachmentemail`, {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(values),
@@ -66,7 +66,7 @@ function Quotation() {
           console.log("failed");
         }
       } else {
-        const sendData = await fetch(`http://localhost:4000/onlymail`, {
+        const sendData = await fetch(`https://mechnodream-backend.onrender.com/onlymail`, {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(values),
