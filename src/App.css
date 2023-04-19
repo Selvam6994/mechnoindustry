@@ -521,7 +521,7 @@ li {
   /* border: 2px solid green; */
   position: relative;
   height: fit-content;
-  width: 30%;
+  width: 15%;
   min-width: 280px;
   height: 100px;
   /* margin: 10px 100px 0 100px; */
@@ -532,31 +532,28 @@ li {
   align-items: center;
   align-content: center;
 }
-.emailUsFileFormPaper {
-  /* border: 2px solid green; */
-  position: relative;
-  height: fit-content;
-  width: 30%;
-  min-width: 280px;
-  height: 200px;
-  /* margin: 10px 100px 0 100px; */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
+
 .checkBox {
-  width: fit-content;
-  border: 2px solid green;
+  width: 20%;
+  /* border: 2px solid green; */
   min-width: 280px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-align-content: center;
- 
+  align-content: center;
+}
+.checkBoxPaper {
+  width: fit-content;
+  /* border: 2px solid rgb(128, 0, 0); */
+  min-width: 280px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 100px;
 }
 .others {
   display: flex;

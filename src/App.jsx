@@ -15,6 +15,7 @@ import Quotation from "./Quotation";
 
 function App() {
   const appWidth = useMediaQuery("(min-width:1105px)");
+  const navWidth = useMediaQuery("(min-width:475px)");
   const [navbar, setNavbar] = useState(false);
   const options = [
     {
@@ -83,7 +84,7 @@ function App() {
         <div className={navbar == false ? "navBar" : "navBarActive"}>
           <div className="titleSection">
             <img style={{ width: "100px" }} src={logo}></img>
-            <span>Mechno Dream Industry</span>
+            {navWidth==true?<span>Mechno Dream Industry</span>:<h6>Mechno Dream Industry</h6>}
           </div>
           <div className="menuButton">
             <Dropdown>

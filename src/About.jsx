@@ -80,7 +80,7 @@ function About() {
   const [springAction, setSpringAction] = useState(false);
   const [iconsSpringAction, setIconSpringAction] = useState(false);
   const scrollForIcons = () => {
-    if (window.scrollY >= 200) {
+    if (window.scrollY >= 100) {
       setIconSpringAction(true);
     } else if (window.scrollY >= 500) {
       setIconSpringAction(true);
