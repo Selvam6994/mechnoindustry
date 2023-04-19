@@ -9,11 +9,12 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import { useMediaQuery } from "@mui/material";
 
 function Quotation() {
   const [form, setForm] = useState(false);
   const [formMessage, setFormMessage] = useState(false);
-
+  const appWidth = useMediaQuery("(min-width:1105px)");
 
   const navigate = useNavigate();
 
@@ -28,7 +29,7 @@ function Quotation() {
       otheroption:"",
       check: [],
     },
-    //https://mechnodream-backend.onrender.com
+    //https://mechno-industry-api.onrender.com
     validationSchema: yup.object({
       companyname: yup.string().required("*"),
       name: yup.string().required("*"),
@@ -41,7 +42,7 @@ function Quotation() {
       if (formik_email.values.file != "") {
         const data = new FormData();
         data.append("file", values.file);
-        const uploadFile = await fetch("https://mechnodream-backend.onrender.com/", {
+        const uploadFile = await fetch(`https://mechno-site-api.onrender.com/upload`, {
           method: "POST",
           headers: new Headers({ Accept: "application/json" }),
           body: data,
@@ -53,7 +54,7 @@ function Quotation() {
         } else {
           console.log("failed");
         }
-        const sendData = await fetch(`https://mechnodream-backend.onrender.com/attachmentemail`, {
+        const sendData = await fetch(`https://mechno-site-api.onrender.com/attachmentemail`, {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(values),
@@ -66,7 +67,7 @@ function Quotation() {
           console.log("failed");
         }
       } else {
-        const sendData = await fetch(`https://mechnodream-backend.onrender.com/onlymail`, {
+        const sendData = await fetch(`https://mechno-site-api.onrender.com/onlymail`, {
           method: "POST",
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(values),
@@ -90,8 +91,8 @@ function Quotation() {
       <form className="emailUsForm" onSubmit={formik_email.handleSubmit}>
         {formMessage == false ? (
           <Box className="emailUsForm">
-            <div className="checkBox">
-              <Paper sx={{ backgroundColor: "rgba(255,255,255,0.7)" }}>
+            <div  className="checkBox" style={appWidth!=true?{marginBottom:"40px",  height: "200px"}:{height: "200px"}}>
+              <Paper sx={{ backgroundColor: "rgba(255,255,255,0.7)",height: "fitContent" }}>
                 <FormControlLabel
                   value="Machining"
                   control={<Checkbox />}

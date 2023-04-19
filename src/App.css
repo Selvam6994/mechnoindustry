@@ -415,7 +415,7 @@ li {
   width: 100%;
   margin: 100px 0 0 0;
 }
-.quotationPage{
+.quotationPage {
   position: absolute;
   /* border: 2px solid rgb(255, 255, 255); */
   width: 100%;
@@ -427,27 +427,25 @@ li {
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
-.quotationPaper{
+.quotationPaper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap:1rem
+  gap: 1rem;
 }
-.emailSendButton{
-  margin: 100px 0 0 0; 
+.emailSendButton {
+  margin: 100px 0 0 0;
 }
-.uploadFiles{
+.uploadFiles {
   margin: 350px 0 0 0;
   position: absolute;
   display: flex;
   flex-direction: row;
-
 }
-
 
 .footerSectionBefore {
   position: absolute;
@@ -489,18 +487,18 @@ li {
   align-items: center;
   margin: 0px 100px 0 100px;
   /* border: 2px solid green; */
-  min-width: 280px;}
+  min-width: 280px;
+}
 
-  .contactDetailsAfter {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 100px 0 100px;
-    /* border: 2px solid green; */
-    width: 100%;
-  }
+.contactDetailsAfter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 100px 0 100px;
+  /* border: 2px solid green; */
+  width: 100%;
+}
 .logo {
   width: 100px;
 }
@@ -519,7 +517,7 @@ li {
   align-content: center;
   gap: 1rem;
 }
-.emailUsFormPaper{
+.emailUsFormPaper {
   /* border: 2px solid green; */
   position: relative;
   height: fit-content;
@@ -533,9 +531,8 @@ li {
   justify-content: center;
   align-items: center;
   align-content: center;
- 
 }
-.emailUsFileFormPaper{
+.emailUsFileFormPaper {
   /* border: 2px solid green; */
   position: relative;
   height: fit-content;
@@ -549,19 +546,19 @@ li {
   justify-content: center;
   align-items: center;
   align-content: center;
-
 }
-.checkBox{
+.checkBox {
   width: fit-content;
-  /* border: 2px solid green; */
+  border: 2px solid green;
   min-width: 280px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-height: 100px;
+align-content: center;
+ 
 }
-.others{
+.others {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
