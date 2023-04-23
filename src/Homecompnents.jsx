@@ -48,7 +48,7 @@ function Homecompnents() {
               >
                 <Card
                   sx={{
-                    height: "400px",
+                    height: "350px",
                     borderRadius: "10px",
                     backgroundColor: "transparent",
                   }}
@@ -56,7 +56,7 @@ function Homecompnents() {
                   <CardMedia
                     component="img"
                     alt={data.title}
-                    height="200"
+                    height="150"
                     image={data.image}
                   />
                   <div
@@ -106,7 +106,7 @@ function Homecompnents() {
                 <Card
                   sx={{
                     width: "100%",
-                    height: "400px",
+                    height: "360px",
                     borderRadius: "10px",
                     backgroundColor: "transparent",
                   }}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,6 +14,21 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import aboutUsImage from "../src/assets/Images/About us.webp";
 import { Link } from "react-router-dom";
+import client1 from "../src/assets/Images/company icons/BONFIGLIOLI.jpg";
+import client2 from "../src/assets/Images/company icons/ELFORGE.jpg";
+import client3 from "../src/assets/Images/company icons/hyundai transys.png";
+import client4 from "../src/assets/Images/company icons/Essae.jpg";
+import client5 from "../src/assets/Images/company icons/Fives.jpg";
+import client6 from "../src/assets/Images/company icons/Kia.jpg";
+import client7 from "../src/assets/Images/company icons/Malles.jpg";
+import client8 from "../src/assets/Images/company icons/Neel Metal.jpg";
+import client9 from "../src/assets/Images/company icons/Novares.jpg";
+import client10 from "../src/assets/Images/company icons/Tafe.jpg";
+import client11 from "../src/assets/Images/company icons/TBI.jpg";
+import client12 from "../src/assets/Images/company icons/JBM.jpg";
+import client13 from "../src/assets/Images/company icons/Wia.jpg";
+import client14 from "../src/assets/Images/company icons/NewTech.jpg";
+import { Paper } from "@mui/material";
 
 function Home() {
   const imageAndCaption = [
@@ -30,7 +45,59 @@ function Home() {
       caption: "For all your Industrial Automation Needs",
     },
   ];
+
+  const clientLogos = [
+    {
+      image: client1,
+    },
+    {
+      image: client2,
+    },
+    {
+      image: client3,
+    },
+    {
+      image: client4,
+    },
+    {
+      image: client5,
+    },
+    {
+      image: client6,
+    },
+    {
+      image: client7,
+    },
+    {
+      image: client8,
+    },
+    {
+      image: client9,
+    },
+    {
+      image: client10,
+    },
+    {
+      image: client11,
+    },
+    {
+      image: client12,
+    },
+    {
+      image: client13,
+    },
+    {
+      image: client14,
+    },
+  ];
   const [cards, setCards] = useState(false);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
+
+  const carousel = useRef();
   const scrollDown = () => {
     if (window.scrollY >= 150) {
       setCards(true);
@@ -72,7 +139,7 @@ function Home() {
               className="aboutCard"
               sx={{
                 maxWidth: "100%",
-                height: "400px",
+                height: "300px",
                 borderRadius: "10px",
                 backgroundColor: "transparent",
               }}
@@ -81,7 +148,7 @@ function Home() {
                 <CardMedia
                   component="img"
                   alt="Image About Us"
-                  height="400"
+                  height="300"
                   image={aboutUsImage}
                 />
               </div>
@@ -115,7 +182,37 @@ function Home() {
               </div>
             </Card>
           </motion.div>
-          {cards == true ? <Homecompnents></Homecompnents> : ""}
+          {cards == true ? <Homecompnents /> : ""}
+
+          <motion.div
+            ref={carousel}
+            className="clientCarousel"
+            whileTap={{ cursor: "grabbing" }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <motion.div
+              className="innerCarousel"
+              drag="x"
+              dragConstraints={{ right: 0, left: -width }}
+            >
+              {clientLogos.map((logo) => {
+                return (
+                  <motion.div
+                    className="item"
+                    whileTap={{ cursor: "grabbing" }}
+                  >
+                    <img src={logo.image} alt=""></img>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>
