@@ -183,7 +183,7 @@ function Home() {
             </Card>
           </motion.div>
           {cards == true ? <Homecompnents /> : ""}
-
+          <h3 style={{ color: "white" }}>Our Clients</h3>
           <motion.div
             ref={carousel}
             className="clientCarousel"

@@ -392,18 +392,7 @@ pointer-events: none;
   background-color: rgba(61, 61, 61, 0.95);
   border-radius: 10px;
 }
-/* .visionCardAfter {
-  width: 80%;
-  min-width: 280px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(61, 61, 61, 0.95);
-  border-radius: 10px;
-} */
+
 .vision {
   color: rgb(1, 113, 249);
   display: flex;
@@ -432,6 +421,17 @@ pointer-events: none;
   flex-wrap: wrap;
   width: 100%;
   margin: 100px 0 0 0;
+}
+.projectPage{
+  position: absolute;
+    width: 100%;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
 }
 .quotationPage {
   position: absolute;
