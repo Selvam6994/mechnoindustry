@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import automation from "../src/assets/Images/Automation.webp";
-import industrialService from "../src/assets/Images/Industrial Services.webp";
+import fabrication from "./assets/Images/Industrial services/Fabrications/Fabrications.jpg";
+import jigsFixtures from "./assets/Images/Industrial services/Jigs and fixtures/Jigs and fixtures.webp";
+import automation from "./assets/Images/Automation/Automation.webp";
+import gauges from "./assets/Images/Precision Gauges/Gauges card image.jpg";
+import tools from "./assets/Images/Cutting tools/Tools card image.jpg";
 import {
   Button,
   Card,
@@ -14,79 +17,89 @@ import {
 import { Link } from "react-router-dom";
 
 function Projects() {
-    const appWidth = useMediaQuery("(min-width:1105px)");
-  const cardContent = [
+  const appWidth = useMediaQuery("(min-width:1105px)");
+  const projects = [
     {
-      image: automation,
-      title: "Industrial Services",
-      content:
-        "We fulfill all your industrial needs to make your organization much efficient and profitable",
-      link: "/projects",
+      category: "Automation",
+      bg_image: automation,
+      motionDuration: "0.5",
+      linkTo: "/automation",
     },
     {
-      image: industrialService,
-      title: "Automation",
-      content:
-        "Towards the Era of Industrial Automation! A destination where you can visualize the reality of moving your company into the Innovation driven Automation World",
-      link: "/projects",
+      category: "Fabrication",
+      bg_image: fabrication,
+      motionDuration: "1",
+      linkTo: "/fabrications",
+    },
+    {
+      category: "Jigs and fixtures",
+      bg_image: jigsFixtures,
+      motionDuration: "1.5",
+      linkTo: "/fixtures",
+    },
+
+    {
+      category: "Gauges",
+      bg_image: gauges,
+      motionDuration: "2",
+      linkTo: "/gauges",
+    },
+    {
+      category: "Cutting Tools",
+      bg_image: tools,
+      motionDuration: "2.5",
+      linkTo: "/tools",
     },
   ];
   return (
-    <div className="projectPage" style={appWidth==true?{margin:"150px auto",gap:"5rem"}:{margin:"250px auto",gap:"15rem"}}>
-      {cardContent.map((data) => {
-        return (
+    <div className="projectPage">
+      <div
+        className="projectCards"
+        style={
+          appWidth == true
+            ? { margin: "300px auto", gap: "8rem" }
+            : { margin: "150px auto", gap: "5rem" }
+        }
+      >
+        {projects.map((data) => {
+        return(
           <motion.div
-            className="boxBefore"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 0.8,
-              delay: 0.5,
+              delay: data.motionDuration,
               ease: [0, 0.71, 0.2, 1.01],
             }}
           >
-            <Card
-              sx={{
-                height: "400px",
-                borderRadius: "10px",
-                backgroundColor: "transparent",
-              }}
-            >
+            <Card sx={{ maxWidth: "400px" }}>
               <CardMedia
-                component="img"
-                alt={data.title}
-                height="180"
-                image={data.image}
-              />
-              <div
-                key={cardContent.title}
-                className="cardContentSection"
-                style={{ color: "white" }}
+                sx={{ height: 250, width: "250px" }}
+                image={data.bg_image}
+                title={data.category}
               >
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {data.title}
-                  </Typography>
-                  <Typography variant="body2" color="white">
-                    {data.content}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    variant="contained"
-                    style={{
-                      backgroundColor: "rgb(206,211,220)",
-                      color: "black",
-                    }}
-                  >
-                    <Link to={data.link}> Know More</Link>
-                  </Button>
-                </CardActions>
-              </div>
+                <div
+                  style={{
+                    backgroundColor: "rgba(0,0,0,0.5)",
+                    height: "250px",
+                  }}
+                >
+                  <CardContent>
+                    <h1 style={{ color: "white" }}>{data.category}</h1>
+                  </CardContent>
+                  <CardActions>
+                    <Link to={data.linkTo}>
+                      <Button size="small" variant="contained">
+                        Explore
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </div>
+              </CardMedia>
             </Card>
           </motion.div>
-        );
-      })}
+        )})}
+      </div>
     </div>
   );
 }

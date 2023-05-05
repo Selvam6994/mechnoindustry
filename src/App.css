@@ -423,16 +423,38 @@ pointer-events: none;
   margin: 100px 0 0 0;
 }
 .projectPage{
+  /* border: 2px solid rgb(93, 211, 38); */
+  width: 100%;
+  height: 100vh;
   position: absolute;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.projectCards{
+  /* border: 2px solid rgb(93, 211, 38); */
+  position: absolute;
+  width: 75%;
   min-width: 280px;
   height: fit-content;
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+align-content: center;
+}
+/* .projectsCards{
+border: 2px solid rgb(128, 0, 0);
+width: 100%;
+  min-width: 280px;
+  height: 200px;
   display: flex;
   flex-direction: column;
  justify-content: center;
  align-items: center;
  flex-wrap: wrap;
-}
+
+} */
 .quotationPage {
   position: absolute;
   /* border: 2px solid rgb(255, 255, 255); */
