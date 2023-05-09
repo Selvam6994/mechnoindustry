@@ -13,6 +13,8 @@ import logo from "../src/assets/Images/Logo.webp";
 import Gallery from "./Gallery";
 import Quotation from "./Quotation";
 import Projects from "./Projects";
+import Automation from "./Automation";
+import Fabrication from "./Fabrication";
 
 function App() {
   const appWidth = useMediaQuery("(min-width:1105px)");
@@ -60,13 +62,16 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/automation" element={<Automation />} />
+        <Route path="/fabrications" element={<Fabrication />} />
         <Route path="/quotation" element={<Quotation />} />
+
       </Routes>
       {appWidth == true ? (
         <div className={navbar == false ? "navBar" : "navBarActive"}>
           <div className="titleSection">
             <img style={{ width: "100px" }} src={logo}></img>
-            <div>Mechno Dream Industry</div>
+            <div style={{ fontSize: "30px" }}>Mechno Dream Industry</div>
           </div>
           <div className="navOptions">
             <ul>
@@ -82,7 +87,11 @@ function App() {
         <div className={navbar == false ? "navBar" : "navBarActive"}>
           <div className="titleSection">
             <img style={{ width: "100px" }} src={logo}></img>
-            {navWidth==true?<span>Mechno Dream Industry</span>:<h6>Mechno Dream Industry</h6>}
+            {navWidth == true ? (
+              <span>Mechno Dream Industry</span>
+            ) : (
+              <h6>Mechno Dream Industry</h6>
+            )}
           </div>
           <div className="menuButton">
             <Dropdown>

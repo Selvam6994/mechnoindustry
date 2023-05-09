@@ -108,7 +108,9 @@ li {
   margin: 0 0 100px 0;
 }
 .options {
-  width: 100px;
+  width: 120px;
+  font-size: 25px;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,9 +200,12 @@ li {
 .aboutCard {
   display: flex;
   flex-direction: row;
+  height: 300px;
 }
 .contentSection {
   padding: 0 0 0 50px;
+  width: 100%;
+  min-width: 280px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -220,26 +225,26 @@ li {
   overflow: hidden;
 }
 
-.innerCarousel{
+.innerCarousel {
   /* border: 2px solid green; */
   width: 100%;
   height: 100%;
   display: flex;
   gap: 1rem;
 }
-.item{
+.item {
   /* border: 2px solid green; */
   min-width: 150px;
   min-height: 150px;
   border-radius: 1rem;
   cursor: grab;
 }
-.item img{
-width: 100%;
-height: 100%;
-border-radius: 1rem;
-padding: 10px;
-pointer-events: none;
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 10px;
+  pointer-events: none;
 }
 .aboutSectionBefore {
   /* border: 2px solid green; */
@@ -422,7 +427,7 @@ pointer-events: none;
   width: 100%;
   margin: 100px 0 0 0;
 }
-.projectPage{
+.projectPage {
   /* border: 2px solid rgb(93, 211, 38); */
   width: 100%;
   height: 100vh;
@@ -430,7 +435,7 @@ pointer-events: none;
   display: flex;
   justify-content: center;
 }
-.projectCards{
+.projectCards {
   /* border: 2px solid rgb(93, 211, 38); */
   position: absolute;
   width: 75%;
@@ -438,23 +443,74 @@ pointer-events: none;
   height: fit-content;
   display: flex;
   flex-direction: row;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
-align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
-/* .projectsCards{
-border: 2px solid rgb(128, 0, 0);
-width: 100%;
-  min-width: 280px;
-  height: 200px;
+
+.automationPage {
+  position: absolute;
+  margin: 200px auto;
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.conveyorCard {
+  margin: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+.imageCard {
+  /* border: 2px solid rgb(128, 0, 0); */
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+.fabricationPage {
+  /* border: 2px solid rgb(255, 255, 255); */
+  width: 100%;
+  height: 500px;
+  margin: 100px 0 0 20px;
+  position: absolute;
+}
 
-} */
+.projectCard {
+  /* border: 2px solid rgb(255, 255, 255); */
+  margin: 20px 0 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 8rem;
+}
+.projectCarousel {
+  cursor: grab;
+}
+.cardMedia {
+  pointer-events: none;
+}
+
+.palletImageCard {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 200px;
+  gap: 8rem;
+  object-fit: cover;
+  margin: 20px 0 20px 0px;
+}
+
 .quotationPage {
   position: absolute;
   /* border: 2px solid rgb(255, 255, 255); */
@@ -496,7 +552,6 @@ width: 100%;
   min-width: 280px;
   height: fit-content;
   margin: 1350px 0 0 0;
-
   background-color: rgba(61, 61, 61, 0.95);
 }
 .footerSectionAfter {

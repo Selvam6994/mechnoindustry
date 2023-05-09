@@ -149,6 +149,7 @@ function Home() {
                   component="img"
                   alt="Image About Us"
                   height="300"
+                  width="100"
                   image={aboutUsImage}
                 />
               </div>
@@ -162,7 +163,11 @@ function Home() {
                   >
                     About Us
                   </Typography>
-                  <Typography variant="body2" color="white">
+                  <Typography
+                    variant="body2"
+                    color="white"
+                    style={{ fontSize: "18px" }}
+                  >
                     Mechno Dream Industry is a Young, Efficient and Passionate
                     workstation where all your industrial dreams would be
                     brought into reality…
@@ -183,7 +188,7 @@ function Home() {
             </Card>
           </motion.div>
           {cards == true ? <Homecompnents /> : ""}
-          <h3 style={{ color: "white" }}>Our Clients</h3>
+          <h4 style={{ color: "white" }}>Our Clients</h4>
           <motion.div
             ref={carousel}
             className="clientCarousel"

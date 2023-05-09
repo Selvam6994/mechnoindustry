@@ -62,43 +62,44 @@ function Projects() {
         }
       >
         {projects.map((data) => {
-        return(
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: data.motionDuration,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-          >
-            <Card sx={{ maxWidth: "400px" }}>
-              <CardMedia
-                sx={{ height: 250, width: "250px" }}
-                image={data.bg_image}
-                title={data.category}
-              >
-                <div
-                  style={{
-                    backgroundColor: "rgba(0,0,0,0.5)",
-                    height: "250px",
-                  }}
+          return (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: data.motionDuration,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
+              <Card sx={{ maxWidth: "400px" }}>
+                <CardMedia
+                  sx={{ height: 250, width: "250px" }}
+                  image={data.bg_image}
+                  title={data.category}
                 >
-                  <CardContent>
-                    <h1 style={{ color: "white" }}>{data.category}</h1>
-                  </CardContent>
-                  <CardActions>
-                    <Link to={data.linkTo}>
-                      <Button size="small" variant="contained">
-                        Explore
-                      </Button>
-                    </Link>
-                  </CardActions>
-                </div>
-              </CardMedia>
-            </Card>
-          </motion.div>
-        )})}
+                  <div
+                    style={{
+                      backgroundColor: "rgba(0,0,0,0.5)",
+                      height: "250px",
+                    }}
+                  >
+                    <CardContent>
+                      <h1 style={{ color: "white" }}>{data.category}</h1>
+                    </CardContent>
+                    <CardActions>
+                      <Link to={data.linkTo}>
+                        <Button size="small" variant="contained">
+                          Explore
+                        </Button>
+                      </Link>
+                    </CardActions>
+                  </div>
+                </CardMedia>
+              </Card>
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );
