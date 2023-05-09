@@ -15,6 +15,7 @@ import Quotation from "./Quotation";
 import Projects from "./Projects";
 import Automation from "./Automation";
 import Fabrication from "./Fabrication";
+import JigsFixtures from "./JigsFixtures";
 
 function App() {
   const appWidth = useMediaQuery("(min-width:1105px)");
@@ -64,6 +65,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/automation" element={<Automation />} />
         <Route path="/fabrications" element={<Fabrication />} />
+        <Route path="/fixtures" element={<JigsFixtures />} />
         <Route path="/quotation" element={<Quotation />} />
 
       </Routes>
