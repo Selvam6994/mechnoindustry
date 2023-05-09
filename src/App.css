@@ -226,14 +226,12 @@ li {
 }
 
 .innerCarousel {
-  /* border: 2px solid green; */
   width: 100%;
   height: 100%;
   display: flex;
   gap: 1rem;
 }
 .item {
-  /* border: 2px solid green; */
   min-width: 150px;
   min-height: 150px;
   border-radius: 1rem;
@@ -480,21 +478,45 @@ li {
   /* border: 2px solid rgb(255, 255, 255); */
   width: 100%;
   height: 500px;
-  margin: 100px 0 0 20px;
+  margin: 100px 0 0 0;
   position: absolute;
 }
 
 .projectCard {
-  /* border: 2px solid rgb(255, 255, 255); */
-  margin: 20px 0 0 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
+  min-width: 280px;
   height: fit-content;
   gap: 8rem;
 }
-.projectCarousel {
+
+/* .projectCarousel {
+  width: 100%;
+  height: fit-content;
+  min-width: 320px;
+  margin: 20px 0 0 0;
+  overflow: hidden;
+} */
+.projectClientCarousel {
+  width: 100%;
+  display: flex;
+  min-width: 320px;
+  height: fit-content;
+  min-width: 320px;
+  overflow: hidden;
+}
+.projectInnerCarousel {
+  /* border: 2px solid green; */
+  width: 100%;
+  min-width: 280px;
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.favItem {
+  border-radius: 1rem;
   cursor: grab;
 }
 .cardMedia {
@@ -508,7 +530,6 @@ li {
   height: 200px;
   gap: 8rem;
   object-fit: cover;
-  margin: 20px 0 20px 0px;
 }
 
 .quotationPage {
