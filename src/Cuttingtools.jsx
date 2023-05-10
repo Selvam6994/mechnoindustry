@@ -52,7 +52,7 @@ function Cuttingtools() {
   return (
     <div className="toolsPage">
       <Section>
-        <h2 style={{ color: "white" }}>Jigs And Fixtures</h2>
+        <h2 style={{ color: "white" }}>Cutting Tools</h2>
       </Section>
       <div className="toolsCard">
         {automation.map((projects) => (
