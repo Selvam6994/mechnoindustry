@@ -468,12 +468,7 @@ li {
   flex-wrap: wrap;
   gap: 8rem;
 }
-.imageCard {
-  /* border: 2px solid rgb(128, 0, 0); */
-  width: 250px;
-  height: 250px;
-  border-radius: 10px;
-}
+
 .fabricationPage {
   /* border: 2px solid rgb(255, 255, 255); */
   width: 100%;
