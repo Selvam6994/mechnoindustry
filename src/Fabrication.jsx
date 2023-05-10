@@ -47,58 +47,57 @@ function Section({ children }) {
   );
 }
 const fabrication = [
-    {
-      name: "Pallets",
-      type: [
-        {
-          image: transportPallet,
-          title: "Transmission Pallets for Transportation",
-        },
-        {
-          image: warehousePallet,
-          title: "Transmission Pallets for Warehouse",
-        },
-        {
-          image: storagePallet,
-          title: "Transmission Storage Pallets",
-        },
-      ],
-    },
-    {
-      name: "Trollys",
-      type: [
-        {
-          image: ssTrolly,
-          title: "Stainless Steel Trollys",
-        },
-        {
-          image: aluminiumTrolly,
-          title: "Aluminium Frame Trollys",
-        },
-        {
-          image: absPipeTrolly,
-          title: "ABS pipe Trollys",
-        },
-      ],
-    },
-       {
-      name: "Work Stations",
-      type: [
-       
-        {
-          image: aluminiumFrameWorkstations,
-          title: "Aluminium Frame Workstations",
-        },
-        {
-            image: aluminiumFrameWorkstationsWithStorage,
-            title: "Workstations With Storage",
-          },
-        {
-          image: msStandAloneWorkstations,
-          title: "MS Stand Alone Workstations",
-        },
-      ],
-    },
+  {
+    name: "Pallets",
+    type: [
+      {
+        image: transportPallet,
+        title: "Transmission Pallets for Transportation",
+      },
+      {
+        image: warehousePallet,
+        title: "Transmission Pallets for Warehouse",
+      },
+      {
+        image: storagePallet,
+        title: "Transmission Storage Pallets",
+      },
+    ],
+  },
+  {
+    name: "Trollys",
+    type: [
+      {
+        image: ssTrolly,
+        title: "Stainless Steel Trollys",
+      },
+      {
+        image: aluminiumTrolly,
+        title: "Aluminium Frame Trollys",
+      },
+      {
+        image: absPipeTrolly,
+        title: "ABS pipe Trollys",
+      },
+    ],
+  },
+  {
+    name: "Work Stations",
+    type: [
+      {
+        image: aluminiumFrameWorkstations,
+        title: "Aluminium Frame Workstations",
+      },
+      {
+        image: aluminiumFrameWorkstationsWithStorage,
+        title: "Workstations With Storage",
+      },
+      {
+        image: msStandAloneWorkstations,
+        title: "MS Stand Alone Workstations",
+      },
+    ],
+  },
   {
     name: "Safety Fencing",
     type: [
@@ -128,7 +127,6 @@ const fabrication = [
       },
     ],
   },
- 
 ];
 
 console.log(fabrication.map((ele) => ele.type.map((e) => e.title)));
@@ -187,7 +185,16 @@ function Fabrication() {
                             alt={job.title}
                           />
                           <CardContent
-                            style={fabPageWidth!=true?{ height: "150px", width: "400px" }:{ height: "100px", width: "400px",display:"flex",flexWrap:"wrap" }}
+                            style={
+                              fabPageWidth != true
+                                ? { height: "150px", width: "400px" }
+                                : {
+                                    height: "100px",
+                                    width: "400px",
+                                    display: "flex",
+                                    flexWrap: "wrap",
+                                  }
+                            }
                           >
                             <Typography variant="h6" component="div">
                               {job.title}
@@ -203,80 +210,8 @@ function Fabrication() {
           </div>
         </>
       ))}
-      {/* <Section>
-        <h1 style={{ color: "white" }}>Trollys</h1>
-      </Section>
-
-      <div className="projectCard">
-        <Section>
-          <motion.div
-            ref={carousel}
-            className="projectCarousel"
-            whileTap={{ cursor: "grabbing" }}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-          >
-            <motion.div
-              className="innerCarousel"
-              drag="x"
-              dragConstraints={{ right: 0, left: -width }}
-            >
-              {trollys.map((trolly) => {
-                return (
-                  <motion.div
-                    whileTap={{ cursor: "grabbing" }}
-                  >
-                    <Card sx={{ maxWidth: 345 }}>
-                      <CardActionArea>
-                        <CardMedia
-                          className="cardMedia"
-                          component="img"
-                          height="150"
-                          image={trolly.image}
-                          alt={trolly.title}
-                        />
-                        <CardContent style={{ height: "100px" }}>
-                          <Typography gutterBottom variant="h5" component="div">
-                            {trolly.title}
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                    </Card>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </motion.div>
-        </Section>
-      </div> */}
     </div>
   );
 }
 
 export default Fabrication;
-
-//    <motion.div
-// ref={carousel}
-// className="projectCarousel"
-// whileTap={{ cursor: "grabbing" }}
-// initial={{ opacity: 0, scale: 0.5 }}
-// animate={{ opacity: 1, scale: 1 }}
-// transition={{
-//   duration: 0.8,
-//   delay: 0.5,
-//   ease: [0, 0.71, 0.2, 1.01],
-// }}
-// >
-// <motion.div
-//   className="innerCarousel"
-//   drag="x"
-//   dragConstraints={{ right: 0, left: -width }}
-// >
-
-// </motion.div>
-// </motion.div>

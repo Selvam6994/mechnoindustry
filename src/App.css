@@ -14,7 +14,7 @@
 .navBar {
   position: fixed;
   width: 100%;
-  /* border: 2px solid green; */
+
   /* background-color: rgba(0, 255, 0, 0.7); */
   color: white;
   min-width: 320px;
@@ -41,6 +41,7 @@ ul {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 6px;
 }
 li {
   gap: 1rem;

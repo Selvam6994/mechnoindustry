@@ -52,7 +52,7 @@ function JigsFixtures() {
           <div className="conveyorCard">
             {automation.map((projects) => (
               <Section>
-                <Card sx={{ maxWidth: 500 }}>
+                <Card sx={{ maxWidth: 500,minWidth: 280 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -71,8 +71,8 @@ function JigsFixtures() {
                         justifyContent: "center",
                         alignItems: "center",
                       }:{
-                        height: "200px",
-                        width: "280px",
+                        height: "100px",
+                        width: "180px",
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",

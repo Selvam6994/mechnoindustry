@@ -360,8 +360,8 @@ function Quotation() {
                     formik_email.setFieldValue("file", e.target.files[0]);
                   }}
                 />
-                <p>If You have more than one pdf/image files to send, </p>
-                <p>kindly, combine as a sigle file before upploading. </p>
+                <p>Do You have more than one pdf/image files to attach? </p>
+                <p>kindly, combine as a sigle file before uploading. </p>
               </Paper>
             </motion.div>
             <Button type="submit" variant="contained">

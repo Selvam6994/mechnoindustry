@@ -53,6 +53,7 @@ function Projects() {
   ];
   return (
     <div className="projectPage">
+       <h1 style={{ color: "white",margin:"150px auto" }}>Our Work</h1>
       <div
         className="projectCards"
         style={
@@ -61,6 +62,7 @@ function Projects() {
             : { margin: "150px auto", gap: "5rem" }
         }
       >
+       
         {projects.map((data) => {
           return (
             <motion.div
