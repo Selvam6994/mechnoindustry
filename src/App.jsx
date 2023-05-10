@@ -16,6 +16,7 @@ import Projects from "./Projects";
 import Automation from "./Automation";
 import Fabrication from "./Fabrication";
 import JigsFixtures from "./JigsFixtures";
+import Cuttingtools from "./Cuttingtools";
 
 function App() {
   const appWidth = useMediaQuery("(min-width:1105px)");
@@ -66,6 +67,7 @@ function App() {
         <Route path="/automation" element={<Automation />} />
         <Route path="/fabrications" element={<Fabrication />} />
         <Route path="/fixtures" element={<JigsFixtures />} />
+        <Route path="/tools" element={<Cuttingtools />} />
         <Route path="/quotation" element={<Quotation />} />
 
       </Routes>

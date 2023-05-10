@@ -79,15 +79,7 @@ function About() {
   const pageWidth1 = useMediaQuery("(min-width:980px)");
   const [springAction, setSpringAction] = useState(false);
   const [iconsSpringAction, setIconSpringAction] = useState(false);
-  const scrollForIcons = () => {
-    if (window.scrollY >= 100) {
-      setIconSpringAction(true);
-    } else if (window.scrollY >= 500) {
-      setIconSpringAction(true);
-    } else {
-      setIconSpringAction(false);
-    }
-  };
+
 
   const scrollForVisionCard = () => {
     if (window.scrollY >= 500) {
@@ -97,7 +89,7 @@ function About() {
     }
   };
   window.addEventListener("scroll", scrollForVisionCard);
-  window.addEventListener("scroll", scrollForIcons);
+
 
   return (
     <div className="aboutUsMain">
@@ -138,7 +130,7 @@ function About() {
           </div>
         </motion.div>
       </div>
-      {iconsSpringAction == true ? (
+   
         <motion.div
           className={pageWidth1 == false ? "IconCardat980px" : "IconCardBefore"}
           initial={pageWidth1 == false ? { y: 500 } : { y: 100 }}
@@ -184,9 +176,7 @@ function About() {
             </div>
           </div>
         </motion.div>
-      ) : (
-        ""
-      )}
+    
 
       <div
         className={pageWidth1 == false ? "visionPageAfter" : "visionPageBefore"}

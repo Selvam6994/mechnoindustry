@@ -531,6 +531,28 @@ li {
   gap: 8rem;
   object-fit: cover;
 }
+.toolsPage {
+  position: absolute;
+  margin: 180px auto;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.toolsCard {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 80px auto;
+  gap: 2rem;
+}
 
 .quotationPage {
   position: absolute;

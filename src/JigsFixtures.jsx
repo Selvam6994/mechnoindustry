@@ -36,7 +36,7 @@ function JigsFixtures() {
         },
         {
           image: hydraulicFixture,
-          title: "hHydraulic Fixture",
+          title: "Hydraulic Fixture",
         },
         {
           image: vmcFixture,
