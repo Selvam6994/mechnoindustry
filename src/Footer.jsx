@@ -86,6 +86,7 @@ function Footer() {
             <span>Thirumullaivoyal,</span>
             <span>Pappakuruchi Kattur,</span>
             <span>Tamil Nadu 600062</span>
+            <span>+917667995898</span>
            <Link to="/quotation"> <Button  variant="contained"
                 color="success">Get Quote</Button></Link>
             <div className="socialMediaSection">
@@ -115,6 +116,7 @@ function Footer() {
             <span>Thirumullaivoyal,</span>
             <span>Pappakuruchi Kattur,</span>
             <span>Tamil Nadu 600062</span>
+            <span>+917667995898</span>
             <div className="socialMediaSection">
               {socialMedia.map((media) => (
                 <a href={media.link} target={"_blank"}>
