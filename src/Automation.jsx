@@ -91,7 +91,7 @@ function Automation() {
       {automation.map((ele) => (
         <>
           <Section>
-            <h2 style={{ color: "white" }}>{ele.name}</h2>
+            <h2 style={{ color: "white",margin:"50px" }}>{ele.name}</h2>
           </Section>
 
           <div className="projectCard">
