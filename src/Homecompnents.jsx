@@ -19,14 +19,14 @@ function Homecompnents() {
       title: "Industrial Services",
       content:
         "We fulfill all your industrial needs to make your organization much efficient and profitable",
-      link: "/projects",
+      link: "/fabrications",
     },
     {
       image: industrialService,
       title: "Automation",
       content:
         "Towards the Era of Industrial Automation! A destination where you can visualize the reality of moving your company into the Innovation driven Automation World",
-      link: "/projects",
+      link: "/automation",
     },
   ];
 
