@@ -52,7 +52,7 @@ function Projects() {
       linkTo: "/tools",
     },
     {
-      category: "Precision Components",
+      category: "Production Components",
       bg_image: components,
       motionDuration: "3",
       linkTo: "/components",
