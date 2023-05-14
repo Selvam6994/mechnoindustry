@@ -28,6 +28,7 @@ import client11 from "../src/assets/Images/company icons/TBI.jpg";
 import client12 from "../src/assets/Images/company icons/JBM.jpg";
 import client13 from "../src/assets/Images/company icons/Wia.jpg";
 import client14 from "../src/assets/Images/company icons/NewTech.jpg";
+import client15 from "../src/assets/Images/company icons/Alison.jpg";
 import { Paper } from "@mui/material";
 
 function Home() {
@@ -88,6 +89,9 @@ function Home() {
     },
     {
       image: client14,
+    },
+    {
+      image: client15,
     },
   ];
   const [cards, setCards] = useState(false);

@@ -28,6 +28,7 @@ import msStandAloneWorkstations from "./assets/Images/Industrial services/Fabric
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+
 function Section({ children }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });

@@ -5,6 +5,7 @@ import jigsFixtures from "./assets/Images/Industrial services/Jigs and fixtures/
 import automation from "./assets/Images/Automation/Automation.webp";
 import gauges from "./assets/Images/Precision Gauges/Gauges card image.jpg";
 import tools from "./assets/Images/Cutting tools/Tools card image.jpg";
+import components from "./assets/Images/Presicion Components/Components card image.jpg";
 import {
   Button,
   Card,
@@ -50,16 +51,22 @@ function Projects() {
       motionDuration: "2.5",
       linkTo: "/tools",
     },
+    {
+      category: "Precision Components",
+      bg_image: components,
+      motionDuration: "3",
+      linkTo: "/components",
+    },
   ];
   return (
     <div className="projectPage">
-       <h1 style={{ color: "white",margin:"150px auto" }}>Our Work</h1>
+       <h1 style={ appWidth == true?{ color: "white",margin:"150px auto" }:{ color: "white",margin:"90px auto" }}>Our Work</h1>
       <div
         className="projectCards"
         style={
           appWidth == true
             ? { margin: "300px auto", gap: "8rem" }
-            : { margin: "150px auto", gap: "5rem" }
+            : { margin: "150px auto", gap: "1rem" }
         }
       >
        
