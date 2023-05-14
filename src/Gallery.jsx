@@ -3,20 +3,20 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { motion } from "framer-motion";
-import image1 from "../src/assets/Images/Image01.webp";
-import image2 from "../src/assets/Images/Image02.webp";
-import image3 from "../src/assets/Images/Image03.webp";
-import image4 from "../src/assets/Images/Image04.webp";
-import image5 from "../src/assets/Images/Image05.webp";
-import image6 from "../src/assets/Images/Image06.webp";
-import image7 from "../src/assets/Images/Image07.webp";
-import image8 from "../src/assets/Images/Image08.webp";
-import image9 from "../src/assets/Images/Image09.webp";
-import image10 from "../src/assets/Images/Image10.webp";
+import image1 from "../src/assets/Images/Image01.jpg";
+import image2 from "../src/assets/Images/Image02.jpg";
+import image3 from "../src/assets/Images/Image03.jpg";
+import image4 from "../src/assets/Images/Image04.jpg";
+import image5 from "../src/assets/Images/Image05.jpg";
+import image6 from "../src/assets/Images/Image06.jpg";
+import image7 from "../src/assets/Images/Image07.jpg";
+import image8 from "../src/assets/Images/Image08.jpg";
+import image9 from "../src/assets/Images/Image09.jpg";
+import image10 from "../src/assets/Images/Image10.jpg";
 import image11 from "../src/assets/Images/Image11.webp";
-import image12 from "../src/assets/Images/Image12.webp";
-import image13 from "../src/assets/Images/Image13.webp";
-import image14 from "../src/assets/Images/Image14.webp";
+import image12 from "../src/assets/Images/Image12.jpg";
+import image13 from "../src/assets/Images/Image13.jpg";
+import image14 from "../src/assets/Images/Image14.jpg";
 
 function Gallery() {
   const images = [
