@@ -285,7 +285,7 @@ li {
 }
 
 .aboutUs {
-  color: rgb(1, 113, 249);
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -329,10 +329,7 @@ li {
   height: fit-content;
 }
 .clientSection {
-  /* border: 2px solid green; */
-
   width: 80%;
-
   min-width: 280px;
   border-radius: 10px;
   position: absolute;
@@ -343,7 +340,7 @@ li {
   align-items: center;
   gap: 0.5rem;
   background-color: rgba(1, 114, 249, 0.75);
-  color: rgb(61, 61, 61);
+  color: rgb(255, 255, 255);
 }
 .clientIconsSection {
   /* border: 2px solid rgb(0, 11, 128); */
@@ -398,7 +395,7 @@ li {
 }
 
 .vision {
-  color: rgb(1, 113, 249);
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

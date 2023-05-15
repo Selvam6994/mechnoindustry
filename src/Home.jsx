@@ -191,7 +191,6 @@ function Home() {
               </div>
             </Card>
           </motion.div>
-          {cards == true ? <Homecompnents /> : ""}
           <h4 style={{ color: "white" }}>Our Clients</h4>
           <motion.div
             ref={carousel}
@@ -222,6 +221,8 @@ function Home() {
               })}
             </motion.div>
           </motion.div>
+          {cards == true ? <Homecompnents /> : ""}
+          
         </div>
       </div>
     </div>

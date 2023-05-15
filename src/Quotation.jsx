@@ -10,10 +10,12 @@ import { useNavigate } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useMediaQuery } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function Quotation() {
   const [form, setForm] = useState(false);
   const [formMessage, setFormMessage] = useState(false);
+  const [loading, setLoading] = useState(false);
   const appWidth = useMediaQuery("(min-width:1105px)");
 
   const navigate = useNavigate();
@@ -68,6 +70,7 @@ function Quotation() {
         if (sendData.status == 200) {
           const result = await sendData.json();
           setFormMessage(true);
+          setLoading(false);
           console.log("success");
         } else {
           console.log("failed");
@@ -347,8 +350,10 @@ function Quotation() {
               }}
             >
               <Paper
-                sx={{ backgroundColor: "rgba(255,255,255,0.7)",padding:"10px"}}
-           
+                sx={{
+                  backgroundColor: "rgba(255,255,255,0.7)",
+                  padding: "10px",
+                }}
               >
                 <TextField
                   sx={{ input: { color: "black" } }}
@@ -364,8 +369,15 @@ function Quotation() {
                 <p>kindly, combine as a sigle file before uploading. </p>
               </Paper>
             </motion.div>
-            <Button type="submit" variant="contained">
-              Send
+
+            <Button
+              type="submit"
+              variant="contained"
+              onClick={() => {
+                setLoading(true);
+              }}
+            >
+              {loading != true ? "Send" : "Please Wait..."}
             </Button>
           </Box>
         ) : (

@@ -78,7 +78,7 @@ function About() {
   ];
   const pageWidth1 = useMediaQuery("(min-width:980px)");
   const [springAction, setSpringAction] = useState(false);
-  const [iconsSpringAction, setIconSpringAction] = useState(false);
+
 
 
   const scrollForVisionCard = () => {
