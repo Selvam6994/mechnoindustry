@@ -95,7 +95,7 @@ function Quotation() {
     },
   });
   {
-    console.log(formik_email.values);
+    console.log(formik_email.values.check);
   }
 
   return (
@@ -373,9 +373,17 @@ function Quotation() {
             <Button
               type="submit"
               variant="contained"
+              
               onClick={() => {
-                setLoading(true);
-              }}
+                formik_email.values.companyname &&
+                formik_email.values.name &&
+                formik_email.values.email &&
+                formik_email.values.phone &&
+                formik_email.values.message != ""
+                  ? setLoading(true)
+                  : setLoading(false);
+             }}
+             disabled = {loading!=true?false:true}
             >
               {loading != true ? "Send" : "Please Wait..."}
             </Button>
