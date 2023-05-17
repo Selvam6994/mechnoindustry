@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Dropdown from "react-bootstrap/Dropdown";
 import Footer from "./Footer";
-import bgImage from "../src/assets/Images/bgimage1.jpg";
+import bgImage from "../src/assets/Images/bgimage4.jpg";
 import About from "./About";
 import { Route, Routes, Link } from "react-router-dom";
 import logo from "../src/assets/Images/Logo.webp";

@@ -14,22 +14,21 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import aboutUsImage from "../src/assets/Images/About us.webp";
 import { Link } from "react-router-dom";
-import client1 from "../src/assets/Images/company icons/BONFIGLIOLI.jpg";
-import client2 from "../src/assets/Images/company icons/ELFORGE.jpg";
+import client1 from "../src/assets/Images/company icons/BONFIGLIOLI.png";
+import client2 from "../src/assets/Images/company icons/ELFORGE.png";
 import client3 from "../src/assets/Images/company icons/hyundai transys.png";
-import client4 from "../src/assets/Images/company icons/Essae.jpg";
-import client5 from "../src/assets/Images/company icons/Fives.jpg";
-import client6 from "../src/assets/Images/company icons/Kia.jpg";
-import client7 from "../src/assets/Images/company icons/Malles.jpg";
-import client8 from "../src/assets/Images/company icons/Neel Metal.jpg";
-import client9 from "../src/assets/Images/company icons/Novares.jpg";
-import client10 from "../src/assets/Images/company icons/Tafe.jpg";
-import client11 from "../src/assets/Images/company icons/TBI.jpg";
-import client12 from "../src/assets/Images/company icons/JBM.jpg";
-import client13 from "../src/assets/Images/company icons/Wia.jpg";
-import client14 from "../src/assets/Images/company icons/NewTech.jpg";
-import client15 from "../src/assets/Images/company icons/Alison.jpg";
-import { Paper } from "@mui/material";
+import client4 from "../src/assets/Images/company icons/Essae.png";
+import client5 from "../src/assets/Images/company icons/Fives.png";
+import client6 from "../src/assets/Images/company icons/Kia.png";
+import client7 from "../src/assets/Images/company icons/Malles.png";
+import client8 from "../src/assets/Images/company icons/Neel Metal.png";
+import client9 from "../src/assets/Images/company icons/Novares.png";
+import client10 from "../src/assets/Images/company icons/Tafe.png";
+import client12 from "../src/assets/Images/company icons/JBM.png";
+import client13 from "../src/assets/Images/company icons/Wia.png";
+import client14 from "../src/assets/Images/company icons/NewTech.png";
+import client15 from "../src/assets/Images/company icons/Alison.png";
+import client16 from "../src/assets/Images/company icons/Bgrneo.png";
 
 function Home() {
   const imageAndCaption = [
@@ -79,9 +78,6 @@ function Home() {
       image: client10,
     },
     {
-      image: client11,
-    },
-    {
       image: client12,
     },
     {
@@ -92,6 +88,9 @@ function Home() {
     },
     {
       image: client15,
+    },
+    {
+      image: client16,
     },
   ];
   const [cards, setCards] = useState(false);
@@ -222,7 +221,6 @@ function Home() {
             </motion.div>
           </motion.div>
           {cards == true ? <Homecompnents /> : ""}
-          
         </div>
       </div>
     </div>

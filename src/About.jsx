@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@mui/material";
 import Card from "@mui/material/Card";
-import client1 from "../src/assets/Images/company icons/BONFIGLIOLI.jpg";
-import client2 from "../src/assets/Images/company icons/ELFORGE.jpg";
+import client1 from "../src/assets/Images/company icons/BONFIGLIOLI.png";
+import client2 from "../src/assets/Images/company icons/ELFORGE.png";
 import client3 from "../src/assets/Images/company icons/hyundai transys.png";
-import client4 from "../src/assets/Images/company icons/Essae.jpg";
-import client5 from "../src/assets/Images/company icons/Fives.jpg";
-import client6 from "../src/assets/Images/company icons/Kia.jpg";
-import client7 from "../src/assets/Images/company icons/Malles.jpg";
-import client8 from "../src/assets/Images/company icons/Neel Metal.jpg";
-import client9 from "../src/assets/Images/company icons/Novares.jpg";
-import client10 from "../src/assets/Images/company icons/Tafe.jpg";
-import client11 from "../src/assets/Images/company icons/TBI.jpg";
-import client12 from "../src/assets/Images/company icons/JBM.jpg";
-import client13 from "../src/assets/Images/company icons/Wia.jpg";
-import client14 from "../src/assets/Images/company icons/NewTech.jpg";
+import client4 from "../src/assets/Images/company icons/Essae.png";
+import client5 from "../src/assets/Images/company icons/Fives.png";
+import client6 from "../src/assets/Images/company icons/Kia.png";
+import client7 from "../src/assets/Images/company icons/Malles.png";
+import client8 from "../src/assets/Images/company icons/Neel Metal.png";
+import client9 from "../src/assets/Images/company icons/Novares.png";
+import client10 from "../src/assets/Images/company icons/Tafe.png";
+import client12 from "../src/assets/Images/company icons/JBM.png";
+import client13 from "../src/assets/Images/company icons/Wia.png";
+import client14 from "../src/assets/Images/company icons/NewTech.png";
+import client15 from "../src/assets/Images/company icons/Alison.png";
+import client16 from "../src/assets/Images/company icons/Bgrneo.png";
 
 function About() {
   const clientImages = [
@@ -60,10 +61,6 @@ function About() {
       tansitionDuration: 6,
     },
     {
-      clientImage: client11,
-      tansitionDuration: 6.5,
-    },
-    {
       clientImage: client12,
       tansitionDuration: 7,
     },
@@ -74,6 +71,14 @@ function About() {
     {
       clientImage: client14,
       tansitionDuration: 8,
+    },
+    {
+      clientImage: client15,
+      tansitionDuration: 8.5,
+    },
+    {
+      clientImage: client16,
+      tansitionDuration: 9,
     },
   ];
   const pageWidth1 = useMediaQuery("(min-width:980px)");
@@ -153,10 +158,10 @@ function About() {
                     duration: images.tansitionDuration,
                   }}
                 >
-                  <Card
+                  <div
                     sx={
                       pageWidth1 == true
-                        ? { width: "150px", height: "150px", margin: "20px 0" }
+                        ? { width: "150px", height: "150px", margin: "20px 0",backgroundColor:"rgba(255,255,255,0)" }
                         : { width: "80px", height: "80px", margin: "5px 0" }
                     }
                     className="clientIcons"
@@ -170,7 +175,7 @@ function About() {
                       src={images.clientImage}
                       alt="Client Images"
                     />
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>
